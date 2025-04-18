@@ -43,7 +43,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-1.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-1.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-2.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-2.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-3.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-3.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-4.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-4.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-5.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-5.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-1.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-1.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-2.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-2.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-3.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-3.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-4.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-4.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ const ClientAreaOne = () => {
                 <div className="col-lg-auto">
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-5.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-5.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ const ClientAreaOne = () => {
         <div className="appointment-thumb-1">
           <img
             src="assets/img/normal/appointment-thumb-1-1.png"
-            alt="Fixturbo"
+            alt="İberAuto"
           />
         </div>
       </div>

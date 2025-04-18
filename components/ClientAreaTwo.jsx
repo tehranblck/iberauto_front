@@ -41,7 +41,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-1.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-1.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-2.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-2.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-3.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-3.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-4.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-4.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-5.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-5.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-1.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-1.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-2.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-2.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-3.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-3.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-4.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-4.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const ClientAreaTwo = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="assets/img/client/1-5.png" alt="Fixturbo" />
+                      <img src="assets/img/client/1-5.png" alt="İberAuto" />
                     </Link>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const ClientAreaTwo = () => {
                   <h2 className="sec-title text-white">WHAT OUR CLIENT SAYS</h2>
                 </div>
                 <div className="quote-icon">
-                  <img src="assets/img/icon/quote2-1.svg" alt="Fixturbo" />
+                  <img src="assets/img/icon/quote2-1.svg" alt="İberAuto" />
                 </div>
                 <div className="row global-carousel testi-slider-2">
                   <Swiper
@@ -187,7 +187,7 @@ const ClientAreaTwo = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -216,7 +216,7 @@ const ClientAreaTwo = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -245,7 +245,7 @@ const ClientAreaTwo = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -274,7 +274,7 @@ const ClientAreaTwo = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -312,7 +312,7 @@ const ClientAreaTwo = () => {
         <div className="testimonial-thumb-2">
           <img
             src="assets/img/normal/testimonial-thumb-2-1.png"
-            alt="Fixturbo"
+            alt="İberAuto"
           />
         </div>
       </div>

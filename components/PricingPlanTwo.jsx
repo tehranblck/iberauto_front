@@ -13,7 +13,7 @@ const PricingPlanTwo = () => {
                 <img
                   className="title-bg-shape shape-center"
                   src="assets/img/bg/title-bg-shape.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </h2>
             </div>
@@ -26,7 +26,7 @@ const PricingPlanTwo = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_2-1.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <h4 className="pricing-card_title">Silver Plan</h4>
@@ -66,7 +66,7 @@ const PricingPlanTwo = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_2-2.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <h4 className="pricing-card_title">Gold Plan</h4>
@@ -106,7 +106,7 @@ const PricingPlanTwo = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_2-3.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <h4 className="pricing-card_title">Platinum Plan</h4>

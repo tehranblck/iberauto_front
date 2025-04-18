@@ -27,7 +27,7 @@ const ProductAreaTwo = () => {
               <div className="product-img">
                 <img
                   src="assets/img/update-img/product/1-1.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="product-content">
@@ -55,7 +55,7 @@ const ProductAreaTwo = () => {
               <div className="product-img">
                 <img
                   src="assets/img/update-img/product/1-2.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="product-content">
@@ -83,7 +83,7 @@ const ProductAreaTwo = () => {
               <div className="product-img">
                 <img
                   src="assets/img/update-img/product/1-3.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="product-content">
@@ -111,7 +111,7 @@ const ProductAreaTwo = () => {
               <div className="product-img">
                 <img
                   src="assets/img/update-img/product/1-4.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="product-content">
@@ -139,7 +139,7 @@ const ProductAreaTwo = () => {
               <div className="product-img">
                 <img
                   src="assets/img/update-img/product/1-5.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
                 <span className="tag">
                   <span className="offer-tag">-20%</span>
@@ -170,7 +170,7 @@ const ProductAreaTwo = () => {
               <div className="product-img">
                 <img
                   src="assets/img/update-img/product/1-6.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="product-content">

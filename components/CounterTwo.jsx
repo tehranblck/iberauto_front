@@ -11,7 +11,7 @@ const CounterTwo = () => {
               <div className="counter-card_icon">
                 <img
                   src="assets/img/icon/counter-icon_2-1.svg"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="media-body">
@@ -38,7 +38,7 @@ const CounterTwo = () => {
               <div className="counter-card_icon">
                 <img
                   src="assets/img/icon/counter-icon_2-2.svg"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="media-body">
@@ -65,7 +65,7 @@ const CounterTwo = () => {
               <div className="counter-card_icon">
                 <img
                   src="assets/img/icon/counter-icon_2-3.svg"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="media-body">
@@ -92,7 +92,7 @@ const CounterTwo = () => {
               <div className="counter-card_icon">
                 <img
                   src="assets/img/icon/counter-icon_2-4.svg"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="media-body">

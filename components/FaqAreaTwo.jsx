@@ -11,7 +11,7 @@ const FaqAreaTwo = () => {
               <div className="about-counter-grid jump">
                 <img
                   src="assets/img/icon/faq2-counter-icon-1.svg"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
                 <div className="media-right">
                   <h3 className="about-counter">
@@ -28,7 +28,7 @@ const FaqAreaTwo = () => {
                   <h4 className="about-counter-text">Services we provide</h4>
                 </div>
               </div>
-              <img src="assets/img/normal/faq-thumb-2-1.png" alt="Fixturbo" />
+              <img src="assets/img/normal/faq-thumb-2-1.png" alt="İberAuto" />
             </div>
           </div>
           <div className="col-xl-6">
@@ -39,7 +39,7 @@ const FaqAreaTwo = () => {
                 <img
                   className="title-bg-shape"
                   src="assets/img/bg/title-bg-shape.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </h2>
             </div>

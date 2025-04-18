@@ -16,7 +16,7 @@ const ProcessAreaTwo = () => {
                 <img
                   className="title-bg-shape shape-center"
                   src="assets/img/bg/title-bg-shape2.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </h2>
             </div>

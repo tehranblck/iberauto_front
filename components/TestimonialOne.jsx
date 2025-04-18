@@ -2,6 +2,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
+
 const TestimonialOne = () => {
   return (
     <div
@@ -12,16 +13,15 @@ const TestimonialOne = () => {
         <div className="row">
           <div className="col-lg-6">
             <div className="testimonial-thumb1">
-              <img src="assets/img/bg/testimonial-1-1.png" alt="Fixturbo" />
+              <img src="assets/img/bg/testimonial-1-1.png" alt="IberAuto" />
             </div>
           </div>
           <div className="col-lg-6">
             <div className="space">
               <div className="title-area">
                 <span className="sub-title">Müştərilərimizin Rəyləri</span>
-
                 <h2 className="sec-title text-white">
-                  Avtomobil Təmiri Ən Yaxşı <br /> Xidmətlər
+                  Orijinal və Keyfiyyətli <br /> Avtomobil Parçaları
                 </h2>
               </div>
               <div className="row global-carousel testi-slider-1">
@@ -39,24 +39,12 @@ const TestimonialOne = () => {
                   className="mySwiper"
                   modules={[FreeMode, Navigation, Thumbs, EffectFade]}
                   breakpoints={{
-                    0: {
-                      slidesPerView: 1,
-                    },
-                    500: {
-                      slidesPerView: 1,
-                    },
-                    768: {
-                      slidesPerView: 1,
-                    },
-                    992: {
-                      slidesPerView: 1,
-                    },
-                    1200: {
-                      slidesPerView: 1,
-                    },
-                    1400: {
-                      slidesPerView: 1,
-                    },
+                    0: { slidesPerView: 1 },
+                    500: { slidesPerView: 1 },
+                    768: { slidesPerView: 1 },
+                    992: { slidesPerView: 1 },
+                    1200: { slidesPerView: 1 },
+                    1400: { slidesPerView: 1 },
                   }}
                 >
                   <SwiperSlide>
@@ -65,25 +53,16 @@ const TestimonialOne = () => {
                         <div className="testi-card_content">
                           <div className="testi-card-profile">
                             <div className="testi-card-profile-details">
-                              <h4 className="testi-profile-title">
-                                Nəfiz Bhuian
-                              </h4>
-                              <span className="testi-profile-desig">
-                                Müştəri
-                              </span>
+                              <h4 className="testi-profile-title">Nəfiz Bhuian</h4>
+                              <span className="testi-profile-desig">Müştəri</span>
                             </div>
                             <div className="quote-icon">
-                              <img
-                                src="assets/img/icon/quote1-1.svg"
-                                alt="Fixturbo"
-                              />
+                              <img src="assets/img/icon/quote1-1.svg" alt="IberAuto" />
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Dam təmiri xidmətləri təmir, quraşdırma və texniki xidməti əhatə edir
-                            yaşayış və ticarət binaları üçün. Peşəkar texniki mütəxəssislər
-                            dam örtüyü, yağış yolları və ventilyasiya sistemləri ilə bağlı
-                            problemləri diaqnostika və həll edirlər
+                            IberAuto-dan aldığım mühərrik parçaları çox keyfiyyətli və orijinaldır.
+                            Sürətli çatdırılma xidməti və peşəkar məsləhət xidməti ilə məmnun qaldım.
                           </p>
                           <div className="rating">
                             <i className="fas fa-star" />
@@ -102,25 +81,16 @@ const TestimonialOne = () => {
                         <div className="testi-card_content">
                           <div className="testi-card-profile">
                             <div className="testi-card-profile-details">
-                              <h4 className="testi-profile-title">
-                                Nəfiz Bhuian
-                              </h4>
-                              <span className="testi-profile-desig">
-                                Müştəri
-                              </span>
+                              <h4 className="testi-profile-title">Əli Hüseynov</h4>
+                              <span className="testi-profile-desig">Müştəri</span>
                             </div>
                             <div className="quote-icon">
-                              <img
-                                src="assets/img/icon/quote1-1.svg"
-                                alt="Fixturbo"
-                              />
+                              <img src="assets/img/icon/quote1-1.svg" alt="IberAuto" />
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Dam təmiri xidmətləri təmir, quraşdırma və texniki xidməti əhatə edir
-                            yaşayış və ticarət binaları üçün. Peşəkar texniki mütəxəssislər
-                            dam örtüyü, yağış yolları və ventilyasiya sistemləri ilə bağlı
-                            problemləri diaqnostika və həll edirlər
+                            Geniş məhsul çeşidi və rəqabətli qiymətlərlə avtomobilim üçün lazım olan
+                            bütün parçaları tapa bilirəm. Xidmət keyfiyyəti və müştəri məmnuniyyəti çox yüksəkdir.
                           </p>
                           <div className="rating">
                             <i className="fas fa-star" />
@@ -139,25 +109,16 @@ const TestimonialOne = () => {
                         <div className="testi-card_content">
                           <div className="testi-card-profile">
                             <div className="testi-card-profile-details">
-                              <h4 className="testi-profile-title">
-                                Nəfiz Bhuian
-                              </h4>
-                              <span className="testi-profile-desig">
-                                Müştəri
-                              </span>
+                              <h4 className="testi-profile-title">Vüsal Əliyev</h4>
+                              <span className="testi-profile-desig">Müştəri</span>
                             </div>
                             <div className="quote-icon">
-                              <img
-                                src="assets/img/icon/quote1-1.svg"
-                                alt="Fixturbo"
-                              />
+                              <img src="assets/img/icon/quote1-1.svg" alt="IberAuto" />
                             </div>
                           </div>
                           <p className="testi-card_text">
-                            Dam təmiri xidmətləri təmir, quraşdırma və texniki xidməti əhatə edir
-                            yaşayış və ticarət binaları üçün. Peşəkar texniki mütəxəssislər
-                            dam örtüyü, yağış yolları və ventilyasiya sistemləri ilə bağlı
-                            problemləri diaqnostika və həll edirlər
+                            Bütün marka və modellər üçün orijinal parçalar tapa bilmək çox rahatdır.
+                            Peşəkar komanda və sürətli çatdırılma xidməti ilə daim əməkdaşlıq edirəm.
                           </p>
                           <div className="rating">
                             <i className="fas fa-star" />
@@ -173,10 +134,10 @@ const TestimonialOne = () => {
                 </Swiper>
 
                 <div className="testimonialOne arrow">
-                  <div className=" testimonialOne-button-next testimonialOne-button">
+                  <div className="testimonialOne-button-next testimonialOne-button">
                     <i className="fas fa-arrow-left"></i>
                   </div>
-                  <div className=" testimonialOne-button-prev testimonialOne-button">
+                  <div className="testimonialOne-button-prev testimonialOne-button">
                     <i className="fas fa-arrow-right"></i>
                   </div>
                 </div>

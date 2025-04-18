@@ -81,7 +81,7 @@ const ContactArea = () => {
                 <div className="about-counter-grid jump">
                   <img
                     src="assets/img/icon/faq2-counter-icon-1.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <div className="media-right">
                     <h3 className="about-counter">
@@ -90,7 +90,7 @@ const ContactArea = () => {
                     <h4 className="about-counter-text">Maşın parçası</h4>
                   </div>
                 </div>
-                <img src="assets/img/normal/faq-thumb-2-1.png" alt="Fixturbo" />
+                <img src="assets/img/normal/faq-thumb-2-1.png" alt="İberAuto" />
               </div>
             </div>
             <div className="col-lg-6">

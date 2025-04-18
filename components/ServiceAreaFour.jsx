@@ -29,7 +29,7 @@ const ServiceAreaFour = () => {
                   <div className="service-card_icon">
                     <img
                       src="assets/img/icon/service-icon_1-1.svg"
-                      alt="Fixturbo"
+                      alt="İberAuto"
                     />
                   </div>
                   <h4 className="service-card_title h5">
@@ -55,7 +55,7 @@ const ServiceAreaFour = () => {
                   <div className="service-card_icon">
                     <img
                       src="assets/img/icon/service-icon_1-2.svg"
-                      alt="Fixturbo"
+                      alt="İberAuto"
                     />
                   </div>
                   <h4 className="service-card_title h5">
@@ -81,7 +81,7 @@ const ServiceAreaFour = () => {
                   <div className="service-card_icon">
                     <img
                       src="assets/img/icon/service-icon_1-3.svg"
-                      alt="Fixturbo"
+                      alt="İberAuto"
                     />
                   </div>
                   <h4 className="service-card_title h5">

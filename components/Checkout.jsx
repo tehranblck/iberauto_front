@@ -23,7 +23,7 @@ const Checkout = () => {
                   >
                     <img
                       src="assets/img/update-img/payment-method/03.png"
-                      alt="Fixturbo"
+                      alt="İberAuto"
                     />
                   </label>
                 </div>
@@ -47,7 +47,7 @@ const Checkout = () => {
                     <Link href="#">
                       <img
                         src="assets/img/update-img/payment-method/01.png"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </li>
@@ -55,7 +55,7 @@ const Checkout = () => {
                     <Link href="#">
                       <img
                         src="assets/img/update-img/payment-method/02.png"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </li>
@@ -63,7 +63,7 @@ const Checkout = () => {
                     <Link href="#">
                       <img
                         src="assets/img/update-img/payment-method/04.png"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </li>
@@ -71,7 +71,7 @@ const Checkout = () => {
                     <Link href="#">
                       <img
                         src="assets/img/update-img/payment-method/05.png"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </li>

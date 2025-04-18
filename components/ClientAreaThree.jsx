@@ -20,7 +20,7 @@ const ClientAreaThree = () => {
                 <div className="counter-card_icon">
                   <img
                     src="assets/img/icon/counter-icon_2-1.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <div className="media-body">
@@ -44,7 +44,7 @@ const ClientAreaThree = () => {
                 <div className="counter-card_icon">
                   <img
                     src="assets/img/icon/counter-icon_2-2.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <div className="media-body">
@@ -68,7 +68,7 @@ const ClientAreaThree = () => {
                 <div className="counter-card_icon">
                   <img
                     src="assets/img/icon/counter-icon_2-3.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <div className="media-body">
@@ -92,7 +92,7 @@ const ClientAreaThree = () => {
                 <div className="counter-card_icon">
                   <img
                     src="assets/img/icon/counter-icon_2-4.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
                 <div className="media-body">
@@ -127,7 +127,7 @@ const ClientAreaThree = () => {
                   <h2 className="sec-title text-white">WHAT OUR CLIENT SAYS</h2>
                 </div>
                 <div className="quote-icon">
-                  <img src="assets/img/icon/quote2-1.svg" alt="Fixturbo" />
+                  <img src="assets/img/icon/quote2-1.svg" alt="İberAuto" />
                 </div>
                 <div className="row global-carousel testi-slider-2">
                   <Swiper
@@ -169,7 +169,7 @@ const ClientAreaThree = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -198,7 +198,7 @@ const ClientAreaThree = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -227,7 +227,7 @@ const ClientAreaThree = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -256,7 +256,7 @@ const ClientAreaThree = () => {
                               <div className="testi-profile_thumb">
                                 <img
                                   src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
+                                  alt="İberAuto"
                                 />
                               </div>
                               <div className="testi-card-profile-details">
@@ -298,7 +298,7 @@ const ClientAreaThree = () => {
           </div>
         </div>
         <div className="testimonial-thumb-2">
-          <img src="assets/img/testimonial/2.png" alt="Fixturbo" />
+          <img src="assets/img/testimonial/2.png" alt="İberAuto" />
         </div>
       </div>
     </div>

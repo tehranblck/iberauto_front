@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { headerLinks } from "../utils/navLinks";
 
 const HeaderOne = () => {
   const [active, setActive] = useState(false);
@@ -47,6 +48,7 @@ const HeaderOne = () => {
   const mobileMenu = () => {
     setActive(!active);
   };
+
   return (
     <>
       <header className="nav-header header-layout1">
@@ -58,17 +60,17 @@ const HeaderOne = () => {
                   <ul>
                     <li>
                       <i className="fas fa-envelope" />
-                      <Link href="mailto:info@example.com">
-                        info@saytyarat.com
+                      <Link href="mailto:info@iberauto.az">
+                        info@iberauto.az
                       </Link>
                     </li>
                     <li>
                       <i className="fas fa-map-marker-alt" />
-                      Baki Şəhəri
+                      Bakı şəhəri, Azərbaycan
                     </li>
                     <li>
                       <i className="fas fa-clock" />
-                      Bazar - Cümə
+                      7/24
                     </li>
                   </ul>
                 </div>
@@ -99,11 +101,10 @@ const HeaderOne = () => {
           </div>
         </div>
         <div className={`sticky-wrapper ${scroll && "sticky"}`}>
-          {/* Main Menu Area */}
           <div className="menu-area">
             <div className="header-navbar-logo">
               <Link href="/">
-                <img src="assets/img/logo-white.svg" alt="Fixturbo" />
+
               </Link>
             </div>
             <div className="container">
@@ -111,29 +112,18 @@ const HeaderOne = () => {
                 <div className="col-auto d-xl-none d-block">
                   <div className="header-logo">
                     <Link href="/">
-                      <img src="assets/img/logo-white.svg" alt="Fixturbo" />
+                      <img src="assets/img/logo-white.svg" alt="IberAuto" />
                     </Link>
                   </div>
                 </div>
                 <div className="col-auto">
                   <nav className="main-menu d-none d-lg-inline-block">
                     <ul>
-                      <li className="menu-item">
-                        <Link href="#">Ana Səhifə</Link>
-
-                      </li>
-                      <li>
-                        <Link href="/about">Haqqımızda</Link>
-                      </li>
-                      <li className="menu-item">
-                        <Link href="/service">Xidmətlər</Link>
-                      </li>
-                      <li>
-                        <Link href="/shop">Mağaza Səhifəsi</Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">Əlaqə</Link>
-                      </li>
+                      {headerLinks.map((link, index) => (
+                        <li key={index}>
+                          <Link href={link.path}>{link.title}</Link>
+                        </li>
+                      ))}
                     </ul>
                   </nav>
                   <div className="navbar-right d-inline-flex d-lg-none">
@@ -148,10 +138,10 @@ const HeaderOne = () => {
                 </div>
                 <div className="col-auto ms-auto d-xl-block d-none">
                   <div className="navbar-right-desc">
-                    <img src="assets/img/icon/chat.svg" alt="Fixturbo" />
+                    <img src="assets/img/icon/chat.svg" alt="IberAuto" />
                     <div className="navbar-right-desc-details">
                       <h6 className="title">Köməyə ehtiyac var?</h6>
-                      <Link className="link" href="tel:+2590256215">
+                      <Link className="link" href="tel:+994514444444">
                         +994 51 444 44 44
                       </Link>
                     </div>
@@ -163,12 +153,11 @@ const HeaderOne = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`mobile-menu-wrapper  ${active && "body-visible"}`}>
+        <div className={`mobile-menu-wrapper ${active && "body-visible"}`}>
           <div className="mobile-menu-area">
             <div className="mobile-logo">
               <Link href="/">
-                <img src="assets/img/logo.svg" alt="Fixturbo" />
+                <img src="assets/img/logo.svg" alt="IberAuto" />
               </Link>
               <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />
@@ -176,94 +165,11 @@ const HeaderOne = () => {
             </div>
             <div className="mobile-menu">
               <ul id="offcanvas-navigation">
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Ana Səhifə</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/">Ana Səhifə 01</Link>
-                    </li>
-                    <li>
-                      <Link href="/home-2">Ana Səhifə 02</Link>
-                    </li>
-                    <li>
-                      <Link href="/home-3">Ana Səhifə 03</Link>
-                    </li>
-                    <li>
-                      <Link href="/home-4">Ana Səhifə 04</Link>
-                    </li>
-                    <li>
-                      <Link href="/home-5">Ana Səhifə 05</Link>
-                    </li>
-                    <li>
-                      <Link href="/home-6">Ana Səhifə 06</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href="/about">Haqqımızda</Link>
-                </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Səhifələr</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/team">Komanda Səhifəsi</Link>
-                    </li>
-                    <li>
-                      <Link href="/team-details">Komanda Detalları</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop">Mağaza Səhifəsi</Link>
-                    </li>
-                    <li>
-                      <Link href="/shop-details">Mağaza Detalları</Link>
-                    </li>
-                    <li>
-                      <Link href="/cart">Səbət</Link>
-                    </li>
-                    <li>
-                      <Link href="/checkout">Ödəniş</Link>
-                    </li>
-                    <li>
-                      <Link href="/wishlist">İstək Siyahısı</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Layihələr</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/project">Layihələr</Link>
-                    </li>
-                    <li>
-                      <Link href="/project-details">Layihə Detalları</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Xidmətlər</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/service">Xidmətlər</Link>
-                    </li>
-                    <li>
-                      <Link href="/service-details">Xidmət Detalları</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item-has-children submenu-item-has-children">
-                  <Link href="#">Blog</Link>
-                  <ul className="sub-menu submenu-class">
-                    <li>
-                      <Link href="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-details">Blog Detalları</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href="/contact">Əlaqə</Link>
-                </li>
+                {headerLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.path}>{link.title}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

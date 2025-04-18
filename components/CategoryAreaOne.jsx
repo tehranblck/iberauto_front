@@ -44,7 +44,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-1.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -58,7 +58,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-2.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -72,7 +72,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-3.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -86,7 +86,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-4.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -100,7 +100,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-5.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -114,7 +114,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-6.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -128,7 +128,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-7.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -142,7 +142,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-8.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -156,7 +156,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-1.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -170,7 +170,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-2.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -184,7 +184,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-3.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -198,7 +198,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-4.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -212,7 +212,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-5.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -226,7 +226,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-6.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -240,7 +240,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-7.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>
@@ -254,7 +254,7 @@ const CategoryAreaOne = () => {
                 <div className="category-card-item">
                   <img
                     src="assets/img/update-img/category/category1-8.png"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                   <h6 className="category-card-title">
                     <Link href="/shop-details">Engine pistons</Link>

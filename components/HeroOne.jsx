@@ -10,35 +10,31 @@ const HeroOne = () => {
     >
       <div className="container">
         <div className="row flex-row-reverse">
-          <div className="col-xl-6">
+          <div style={{ alignSelf: 'flex-start', marginBottom: '10px' }} className="col-xl-6 ">
             <div className="hero-style1">
-              <span className="sub-title text-white">Böyümə Sürətləndirici</span>
+              <span className="sub-title text-white">Ən etibarlı avtomobil parçaları</span>
               <h1 className="hero-title text-white">
-                Hazır Olun{" "}
-                <span clas>
-                  <img src="assets/img/hero/hero_shape_1.png" alt="Fixturbo" />
-                  Ən Yaxşı
-                </span>{" "}
-                Keyfiyyətli Xidmət Üçün
+
+                Keyfiyyətli Avtomobil Parçaları
               </h1>
               <p className="hero-text text-white">
-                Avtomobilinizə ehtiyac duyduğu bütün xidmətləri təqdim edirik.
-                Təcrübəli mütəxəssislərimiz və müasir avadanlıqlarımızla
-                avtomobilinizin ən yaxşı vəziyyətdə olmasını təmin edirik.
+                Bütün marka və modellər üçün orijinal və keyfiyyətli avtomobil parçaları.
+                Geniş çeşid, sürətli çatdırılma və ən yaxşı qiymətlərlə sizə xidmət edirik.
+                Avtomobiliniz üçün lazım olan bütün parçaları bir yerdə tapın.
               </p>
               <div className="btn-group">
-                <Link href="/about" className="btn">
-                  Haqqımızda
+                <Link href="/shop" className="btn">
+                  Məhsullar
                 </Link>
-                <Link href="/service" className="btn style-border">
-                  Xidmətlərimiz
+                <Link href="/contact" className="btn style-border">
+                  Əlaqə
                 </Link>
               </div>
             </div>
           </div>
-          <div className="col-xl-6">
+          <div style={{ alignSelf: 'flex-end' }} className="col-xl-6">
             <div className="hero-thumb bottom-0 text-center">
-              <img src="assets/img/hero/hero_thumb_1_1.png" alt="Fixturbo" />
+              <img src="assets/img/hero/hero_thumb_1_1.png" alt="IberAuto" />
             </div>
           </div>
         </div>

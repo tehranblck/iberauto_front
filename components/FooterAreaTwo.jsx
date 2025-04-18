@@ -10,7 +10,7 @@ const FooterAreaTwo = () => {
         <div className="footer-top-2">
           <div className="footer-logo">
             <Link href="/">
-              <img src="assets/img/logo-white.svg" alt="Fixturbo" />
+              <img src="assets/img/logo-white.svg" alt="İberAuto" />
             </Link>
           </div>
           <h3 className="footer-top-title text-white">
@@ -152,7 +152,7 @@ const FooterAreaTwo = () => {
           <div className="row gy-3 justify-content-md-between justify-content-center">
             <div className="col-auto align-self-center">
               <p className="copyright-text text-center">
-                © <Link href="#">Fixturbo</Link> 2024 | All Rights Reserved
+                © <Link href="#">İberAuto</Link> 2024 | All Rights Reserved
               </p>
             </div>
             <div className="col-auto">

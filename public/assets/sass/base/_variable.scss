@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   --theme-color: #e8092e;
@@ -17,7 +17,7 @@
   --success-color: #28a745;
   --error-color: #dc3545;
   --border-color: #e1e1e1;
-  --title-font: "Yantramanav", sans-serif;
+  --title-font: "Roboto", sans-serif;
   --body-font: "Roboto", sans-serif;
   --icon-font: "Font Awesome 5 Free";
   --main-container: 1290px;
@@ -81,60 +81,52 @@ $space-mobile: var(--section-space-mobile);
 $space-mobile-extra: calc(var(--section-space-mobile) - 30px);
 
 // BG Color Mapping
-$bgcolorMap: ();
-$bgcolorMap: map-merge(
-  (
-    "theme": $theme-color,
-    "theme2": $theme-color,
-    "smoke": $smoke-color,
-    "smoke2": $smoke-color2,
-    "smoke3": $smoke-color3,
-    "smoke4": $smoke-color4,
-    "smoke5": $smoke-color5,
-    "white": $white-color,
-    "black": $black-color,
-    "title": $title-color,
-  ),
-  $bgcolorMap
+$bgcolorMap: (
 );
+$bgcolorMap: map-merge(("theme": $theme-color,
+      "theme2": $theme-color,
+      "smoke": $smoke-color,
+      "smoke2": $smoke-color2,
+      "smoke3": $smoke-color3,
+      "smoke4": $smoke-color4,
+      "smoke5": $smoke-color5,
+      "white": $white-color,
+      "black": $black-color,
+      "title": $title-color,
+    ),
+    $bgcolorMap);
 
 // Overlay Color Mapping
-$overlaycolorMap: ();
-$overlaycolorMap: map-merge(
-  (
-    "theme": $theme-color,
-    "title": $title-color,
-    "white": $white-color,
-    "black": $black-color,
-    "overlay1": #131b23,
-  ),
-  $overlaycolorMap
+$overlaycolorMap: (
 );
+$overlaycolorMap: map-merge(("theme": $theme-color,
+      "title": $title-color,
+      "white": $white-color,
+      "black": $black-color,
+      "overlay1": #131b23,
+    ),
+    $overlaycolorMap);
 
 // Text Color Mapping
-$textColorsMap: ();
-$textColorsMap: map-merge(
-  (
-    "theme": $theme-color,
-    "theme2": $theme-color,
-    "title": $title-color,
-    "body": $body-color,
-    "white": $white-color,
-    "light": $light-color,
-    "yellow": $yellow-color,
-    "success": $success-color,
-    "error": $error-color,
-  ),
-  $textColorsMap
+$textColorsMap: (
 );
+$textColorsMap: map-merge(("theme": $theme-color,
+      "theme2": $theme-color,
+      "title": $title-color,
+      "body": $body-color,
+      "white": $white-color,
+      "light": $light-color,
+      "yellow": $yellow-color,
+      "success": $success-color,
+      "error": $error-color,
+    ),
+    $textColorsMap);
 
 // Font Mapping
-$fontsMap: ();
-$fontsMap: map-merge(
-  (
-    "icon": $icon-font,
-    "title": $title-font,
-    "body": $body-font,
-  ),
-  $fontsMap
+$fontsMap: (
 );
+$fontsMap: map-merge(("icon": $icon-font,
+      "title": $title-font,
+      "body": $body-font,
+    ),
+    $fontsMap);

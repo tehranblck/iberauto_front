@@ -8,7 +8,7 @@ const FeatureAreaOne = () => {
           <div className="col-xl-4">
             <div className="single-feature-wrap">
               <div className="thumb">
-                <img src="assets/img/intro/01.png" alt="Fixturbo" />
+                <img src="assets/img/intro/01.png" alt="İberAuto" />
               </div>
               <div className="media-body">
                 <h4>Free Delivery</h4>
@@ -19,7 +19,7 @@ const FeatureAreaOne = () => {
           <div className="col-xl-4">
             <div className="single-feature-wrap">
               <div className="thumb">
-                <img src="assets/img/intro/02.png" alt="Fixturbo" />
+                <img src="assets/img/intro/02.png" alt="İberAuto" />
               </div>
               <div className="media-body">
                 <h4>Moneyback Guarantee</h4>
@@ -30,7 +30,7 @@ const FeatureAreaOne = () => {
           <div className="col-xl-4">
             <div className="single-feature-wrap">
               <div className="thumb">
-                <img src="assets/img/intro/03.png" alt="Fixturbo" />
+                <img src="assets/img/intro/03.png" alt="İberAuto" />
               </div>
               <div className="media-body">
                 <h4>24/7 Online Support</h4>

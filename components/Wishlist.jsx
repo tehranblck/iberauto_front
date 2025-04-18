@@ -38,7 +38,7 @@ const Wishlist = () => {
                       <img
                         src="assets/img/update-img/category/category1-1.png"
                         className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </td>
@@ -89,7 +89,7 @@ const Wishlist = () => {
                       <img
                         src="assets/img/update-img/category/category1-2.png"
                         className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </td>
@@ -152,7 +152,7 @@ const Wishlist = () => {
                       <img
                         src="assets/img/update-img/category/category1-3.png"
                         className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </Link>
                   </td>

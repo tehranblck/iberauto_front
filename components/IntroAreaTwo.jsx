@@ -16,7 +16,7 @@ const IntroAreaTwo = () => {
             <div className="single-intro-wrap style2">
               <span className="bg-border" />
               <div className="thumb">
-                <img src="assets/img/intro/1.png" alt="Fixturbo" />
+                <img src="assets/img/intro/1.png" alt="İberAuto" />
               </div>
               <div className="details">
                 <h3>Looking For A Car Part’s?</h3>
@@ -34,7 +34,7 @@ const IntroAreaTwo = () => {
             <div className="single-intro-wrap style2">
               <span className="bg-border" />
               <div className="thumb">
-                <img src="assets/img/intro/2.png" alt="Fixturbo" />
+                <img src="assets/img/intro/2.png" alt="İberAuto" />
               </div>
               <div className="details">
                 <h3>Want To Sell A Car Part’s?</h3>
@@ -52,7 +52,7 @@ const IntroAreaTwo = () => {
             <div className="single-intro-wrap style2">
               <span className="bg-border" />
               <div className="thumb">
-                <img src="assets/img/intro/3.png" alt="Fixturbo" />
+                <img src="assets/img/intro/3.png" alt="İberAuto" />
               </div>
               <div className="details">
                 <h3>Book A Car Repair?</h3>

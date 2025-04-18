@@ -11,7 +11,7 @@ const ServiceDetails = () => {
               <div className="page-img mb-45">
                 <img
                   src="assets/img/service/service-details1-1.png"
-                  alt="Fixturbo"
+                  alt="İberAuto"
                 />
               </div>
               <div className="page-content">
@@ -46,7 +46,7 @@ const ServiceDetails = () => {
                     <div className="page-img">
                       <img
                         src="assets/img/service/service-details1-2.png"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </div>
                   </div>
@@ -54,7 +54,7 @@ const ServiceDetails = () => {
                     <div className="page-img">
                       <img
                         src="assets/img/service/service-details1-3.png"
-                        alt="Fixturbo"
+                        alt="İberAuto"
                       />
                     </div>
                   </div>

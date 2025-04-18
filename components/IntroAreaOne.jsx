@@ -17,7 +17,7 @@ const IntroAreaOne = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-fact-wrap">
                 <div className="thumb">
-                  <img src="assets/img/fact/1.png" alt="Fixturbo" />
+                  <img src="assets/img/fact/1.png" alt="İberAuto" />
                 </div>
                 <div className="details">
                   <h2>
@@ -39,7 +39,7 @@ const IntroAreaOne = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-fact-wrap">
                 <div className="thumb">
-                  <img src="assets/img/fact/2.png" alt="Fixturbo" />
+                  <img src="assets/img/fact/2.png" alt="İberAuto" />
                 </div>
                 <div className="details">
                   <h2>
@@ -61,7 +61,7 @@ const IntroAreaOne = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-fact-wrap">
                 <div className="thumb">
-                  <img src="assets/img/fact/3.png" alt="Fixturbo" />
+                  <img src="assets/img/fact/3.png" alt="İberAuto" />
                 </div>
                 <div className="details">
                   <h2>
@@ -82,7 +82,7 @@ const IntroAreaOne = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-fact-wrap">
                 <div className="thumb">
-                  <img src="assets/img/fact/4.png" alt="Fixturbo" />
+                  <img src="assets/img/fact/4.png" alt="İberAuto" />
                 </div>
                 <div className="details">
                   <h2>
@@ -144,7 +144,7 @@ const IntroAreaOne = () => {
               <div>
                 <div className="single-intro-wrap">
                   <div className="thumb">
-                    <img src="assets/img/intro/4.png" alt="Fixturbo" />
+                    <img src="assets/img/intro/4.png" alt="İberAuto" />
                   </div>
                   <div className="details">
                     <h3>Avtomobil Arxa İşığı</h3>
@@ -160,7 +160,7 @@ const IntroAreaOne = () => {
               <div>
                 <div className="single-intro-wrap">
                   <div className="thumb">
-                    <img src="assets/img/intro/5.png" alt="Fixturbo" />
+                    <img src="assets/img/intro/5.png" alt="İberAuto" />
                   </div>
                   <div className="details">
                     <h3>Avtomobil Sükanı</h3>
@@ -176,7 +176,7 @@ const IntroAreaOne = () => {
               <div>
                 <div className="single-intro-wrap style-2">
                   <div className="thumb">
-                    <img src="assets/img/intro/6.png" alt="Fixturbo" />
+                    <img src="assets/img/intro/6.png" alt="İberAuto" />
                   </div>
                   <div className="details">
                     <h3>Avtomobil Gövdəsi və Mühərriki</h3>
@@ -192,7 +192,7 @@ const IntroAreaOne = () => {
               <div>
                 <div className="single-intro-wrap">
                   <div className="thumb">
-                    <img src="assets/img/intro/4.png" alt="Fixturbo" />
+                    <img src="assets/img/intro/4.png" alt="İberAuto" />
                   </div>
                   <div className="details">
                     <h3>Avtomobil Arxa İşığı</h3>
@@ -208,7 +208,7 @@ const IntroAreaOne = () => {
               <div>
                 <div className="single-intro-wrap">
                   <div className="thumb">
-                    <img src="assets/img/intro/5.png" alt="Fixturbo" />
+                    <img src="assets/img/intro/5.png" alt="İberAuto" />
                   </div>
                   <div className="details">
                     <h3>Avtomobil Sükanı</h3>
@@ -224,7 +224,7 @@ const IntroAreaOne = () => {
               <div>
                 <div className="single-intro-wrap style-2">
                   <div className="thumb">
-                    <img src="assets/img/intro/6.png" alt="Fixturbo" />
+                    <img src="assets/img/intro/6.png" alt="İberAuto" />
                   </div>
                   <div className="details">
                     <h3>Avtomobil Gövdəsi və Mühərriki</h3>

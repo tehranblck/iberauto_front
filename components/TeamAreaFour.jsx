@@ -55,7 +55,7 @@ const TeamAreaFour = () => {
               <div>
                 <div className="team-card style3">
                   <div className="team-card_img">
-                    <img src="assets/img/team/team-1-1.png" alt="Fixturbo" />
+                    <img src="assets/img/team/team-1-1.png" alt="İberAuto" />
                   </div>
                   <div className="team-card_content">
                     <h4 className="team-card_title">
@@ -86,7 +86,7 @@ const TeamAreaFour = () => {
               <div>
                 <div className="team-card style3">
                   <div className="team-card_img">
-                    <img src="assets/img/team/team-1-3.png" alt="Fixturbo" />
+                    <img src="assets/img/team/team-1-3.png" alt="İberAuto" />
                   </div>
                   <div className="team-card_content">
                     <h4 className="team-card_title">
@@ -117,7 +117,7 @@ const TeamAreaFour = () => {
               <div>
                 <div className="team-card style3">
                   <div className="team-card_img">
-                    <img src="assets/img/team/team-1-1.png" alt="Fixturbo" />
+                    <img src="assets/img/team/team-1-1.png" alt="İberAuto" />
                   </div>
                   <div className="team-card_content">
                     <h4 className="team-card_title">
@@ -148,7 +148,7 @@ const TeamAreaFour = () => {
               <div>
                 <div className="team-card style3">
                   <div className="team-card_img">
-                    <img src="assets/img/team/team-1-3.png" alt="Fixturbo" />
+                    <img src="assets/img/team/team-1-3.png" alt="İberAuto" />
                   </div>
                   <div className="team-card_content">
                     <h4 className="team-card_title">

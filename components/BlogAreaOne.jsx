@@ -9,12 +9,12 @@ const BlogAreaOne = () => {
           <img
             className="about1-shape-img-1 spin"
             src="assets/img/normal/about_shape1-2.svg"
-            alt="Fixturbo"
+            alt="İberAuto"
           />
           <img
             className="about1-shape-img-2 spin2"
             src="assets/img/normal/about_shape1-1.svg"
-            alt="Fixturbo"
+            alt="İberAuto"
           />
         </div>
         <div className="container">
@@ -61,7 +61,7 @@ const BlogAreaOne = () => {
                 <div>
                   <div className="blog-card">
                     <div className="blog-img">
-                      <img src="assets/img/blog/blog_s1_3.png" alt="Fixturbo" />
+                      <img src="assets/img/blog/blog_s1_3.png" alt="İberAuto" />
                       <div className="blog-date">
                         <Link href="/blog">
                           <span>17</span>Feb
@@ -96,7 +96,7 @@ const BlogAreaOne = () => {
                 <div>
                   <div className="blog-card">
                     <div className="blog-img">
-                      <img src="assets/img/blog/blog_s1_1.png" alt="Fixturbo" />
+                      <img src="assets/img/blog/blog_s1_1.png" alt="İberAuto" />
                       <div className="blog-date">
                         <Link href="/blog">
                           <span>17</span>Feb
@@ -131,7 +131,7 @@ const BlogAreaOne = () => {
                 <div>
                   <div className="blog-card">
                     <div className="blog-img">
-                      <img src="assets/img/blog/blog_s1_3.png" alt="Fixturbo" />
+                      <img src="assets/img/blog/blog_s1_3.png" alt="İberAuto" />
                       <div className="blog-date">
                         <Link href="/blog">
                           <span>17</span>Feb
@@ -166,7 +166,7 @@ const BlogAreaOne = () => {
                 <div>
                   <div className="blog-card">
                     <div className="blog-img">
-                      <img src="assets/img/blog/blog_s1_1.png" alt="Fixturbo" />
+                      <img src="assets/img/blog/blog_s1_1.png" alt="İberAuto" />
                       <div className="blog-date">
                         <Link href="/blog">
                           <span>17</span>Feb

@@ -8,12 +8,12 @@ const PricingPlanOne = () => {
         <img
           className="about1-shape-img-1 spin"
           src="assets/img/normal/about_shape1-2.svg"
-          alt="Fixturbo"
+          alt="İberAuto"
         />
         <img
           className="about1-shape-img-2 spin2"
           src="assets/img/normal/about_shape1-1.svg"
-          alt="Fixturbo"
+          alt="İberAuto"
         />
       </div>
       <div className="container">
@@ -38,7 +38,7 @@ const PricingPlanOne = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_1-1.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
               </div>
@@ -80,7 +80,7 @@ const PricingPlanOne = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_1-2.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
               </div>
@@ -122,7 +122,7 @@ const PricingPlanOne = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_1-3.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
               </div>
@@ -164,7 +164,7 @@ const PricingPlanOne = () => {
                 <div className="pricing-card_icon">
                   <img
                     src="assets/img/icon/picing-icon_1-4.svg"
-                    alt="Fixturbo"
+                    alt="İberAuto"
                   />
                 </div>
               </div>

@@ -7,12 +7,12 @@ const ProcessAreaOne = () => {
         <img
           className="about1-shape-img-1 spin"
           src="/assets/img/normal/about_shape1-2.svg"
-          alt="Fixturbo"
+          alt="İberAuto"
         />
         <img
           className="about1-shape-img-2 spin2"
           src="/assets/img/normal/about_shape1-1.svg"
-          alt="Fixturbo"
+          alt="İberAuto"
         />
       </div>
       <div className="container">
@@ -30,7 +30,7 @@ const ProcessAreaOne = () => {
           <div className="col-lg-4 process-card-wrap">
             <div className="process-card">
               <div className="process-card-icon">
-                <img src="/assets/img/icon/process-icon-1-1.svg" alt="Fixturbo" />
+                <img src="/assets/img/icon/process-icon-1-1.svg" alt="İberAuto" />
               </div>
               <h4 className="process-card-title">Mobile Car Repair</h4>
               <p className="process-card-text">
@@ -43,7 +43,7 @@ const ProcessAreaOne = () => {
           <div className="col-lg-4 process-card-wrap">
             <div className="process-card process-card-center">
               <div className="process-card-icon">
-                <img src="/assets/img/icon/process-icon-1-2.svg" alt="Fixturbo" />
+                <img src="/assets/img/icon/process-icon-1-2.svg" alt="İberAuto" />
               </div>
               <h4 className="process-card-title">Pro Auto Fix</h4>
               <p className="process-card-text">
@@ -56,7 +56,7 @@ const ProcessAreaOne = () => {
           <div className="col-lg-4 process-card-wrap">
             <div className="process-card">
               <div className="process-card-icon">
-                <img src="/assets/img/icon/process-icon-1-3.svg" alt="Fixturbo" />
+                <img src="/assets/img/icon/process-icon-1-3.svg" alt="İberAuto" />
               </div>
               <h4 className="process-card-title">Precision Auto Works</h4>
               <p className="process-card-text">

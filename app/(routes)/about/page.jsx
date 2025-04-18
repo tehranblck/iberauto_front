@@ -1,19 +1,16 @@
 
 import AboutTwo from "../../../components/AboutTwo";
 import Breadcrumb from "../../../components/Breadcrumb";
-import CTAAreaOne from "../../../components/CTAAreaOne";
 import FooterAreaOne from "../../../components/FooterAreaOne";
 import HeaderOne from "../../../components/HeaderOne";
-import ProcessAreaOne from "../../../components/ProcessAreaOne";
 import SubscribeOne from "../../../components/SubscribeOne";
-import TeamAreaTwo from "../../../components/TeamAreaTwo";
 import TestimonialOne from "../../../components/TestimonialOne";
 import Preloader from "../../../helper/Preloader";
 
 export const metadata = {
-  title: "Haqqımızda || saytyarat - Avtomobil Təmir & Xidmət",
+  title: "Haqqımızda || IberAuto - Avtomobil Parçaları",
   description:
-    "saytyarat",
+    "IberAuto - Avtomobil Parçaları",
 };
 
 

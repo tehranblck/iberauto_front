@@ -7,16 +7,16 @@ const FaqAreaOne = () => {
         <div className="row">
           <div className="col-lg-6">
             <div className="title-area mb-lg-0">
-              <span className="sub-title">İstifadəçi sualları</span>
+              <span className="sub-title">Tez-tez verilən suallar</span>
               <h2 className="sec-title">
-                İstifadəçi sualları
+                Avtomobil Parçaları Haqqında Suallar
               </h2>
               <p className="sec-text">
-                Avtomobil təmiri, avtomobilin hansı hissəsini təmir etdirməyi seçə bilərəm?
+                Avtomobil parçaları satın alırkən diqqət etməli olduğunuz məqamlar və sifariş prosesi haqqında məlumat.
               </p>
               <div className="btn-wrap mt-30">
                 <Link className="btn style2" href="/contact">
-                  Daha Çox <i className="fas fa-arrow-right ms-2" />
+                  Daha çox <i className="fas fa-arrow-right ms-2" />
                 </Link>
               </div>
             </div>
@@ -26,14 +26,14 @@ const FaqAreaOne = () => {
               <div className="accordion-card active">
                 <div className="accordion-header" id="collapse-item-1">
                   <button
-                    className="accordion-button "
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse-1"
                     aria-expanded="true"
                     aria-controls="collapse-1"
                   >
-                    Avtomobilimin hansı hissəsini təmir etdirməyi seçə bilərəm?
+                    Orijinal parçaları necə təmin edirsiniz?
                   </button>
                 </div>
                 <div
@@ -44,12 +44,13 @@ const FaqAreaOne = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Səhifənin oxunaqlı məzmunu oxucunu diqqətindən yayındırır. Bir çox masaüstü nəşr paketləri və veb səhifə redaktorları indi Lorem Ipsum{" "}
+                      Bütün parçalarımız rəsmi distribütorlardan və etibarlı təchizatçılardan təmin edilir.
+                      Hər bir parça üçün orijinallıq sertifikatı və zəmanət təqdim edirik.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="accordion-card ">
+              <div className="accordion-card">
                 <div className="accordion-header" id="collapse-item-2">
                   <button
                     className="accordion-button collapsed"
@@ -59,23 +60,24 @@ const FaqAreaOne = () => {
                     aria-expanded="false"
                     aria-controls="collapse-2"
                   >
-                    Avtomobilimi nə qədər tezliklə servisə gətirməliyəm?
+                    Sifariş etdiyim parçalar nə qədər müddətdə çatdırılır?
                   </button>
                 </div>
                 <div
                   id="collapse-2"
-                  className="accordion-collapse collapse "
+                  className="accordion-collapse collapse"
                   aria-labelledby="collapse-item-2"
                   data-bs-parent="#faqAccordion"
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Səhifənin oxunaqlı məzmunu oxucunu diqqətindən yayındırır. Bir çox masaüstü nəşr paketləri və veb səhifə redaktorları indi Lorem Ipsum
+                      Stokda olan parçalar 1-2 iş günü ərzində çatdırılır. Xüsusi sifarişlər üçün
+                      çatdırılma müddəti parçanın növündən və təchizatçıdan asılı olaraq dəyişir.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="accordion-card ">
+              <div className="accordion-card">
                 <div className="accordion-header" id="collapse-item-3">
                   <button
                     className="accordion-button collapsed"
@@ -85,23 +87,24 @@ const FaqAreaOne = () => {
                     aria-expanded="false"
                     aria-controls="collapse-3"
                   >
-                    Yoxlama lampası yandıqda nə etməliyəm?
+                    Hansı ödəniş üsullarını qəbul edirsiniz?
                   </button>
                 </div>
                 <div
                   id="collapse-3"
-                  className="accordion-collapse collapse "
+                  className="accordion-collapse collapse"
                   aria-labelledby="collapse-item-3"
                   data-bs-parent="#faqAccordion"
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Səhifənin oxunaqlı məzmunu oxucunu diqqətindən yayındırır. Bir çox masaüstü nəşr paketləri və veb səhifə redaktorları indi Lorem Ipsum
+                      Nağd ödəniş, bank kartı və bank köçürməsi ilə ödəniş qəbul edirik.
+                      Həmçinin, bəzi bankların təklif etdiyi taksit imkanlarından da yararlana bilərsiniz.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="accordion-card ">
+              <div className="accordion-card">
                 <div className="accordion-header" id="collapse-item-4">
                   <button
                     className="accordion-button collapsed"
@@ -111,18 +114,19 @@ const FaqAreaOne = () => {
                     aria-expanded="false"
                     aria-controls="collapse-4"
                   >
-                    Avtomobilin təmiri nə qədər vaxt aparır?
+                    Zəmanət şərtləriniz nələrdir?
                   </button>
                 </div>
                 <div
                   id="collapse-4"
-                  className="accordion-collapse collapse "
+                  className="accordion-collapse collapse"
                   aria-labelledby="collapse-item-4"
                   data-bs-parent="#faqAccordion"
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Səhifənin oxunaqlı məzmunu oxucunu diqqətindən yayındırır. Bir çox masaüstü nəşr paketləri və veb səhifə redaktorları indi Lorem Ipsum
+                      Bütün orijinal parçalarımız üçün istehsalçı zəmanəti təqdim edirik.
+                      Zəmanət müddəti parçanın növündən asılı olaraq 6 ay ilə 2 il arasında dəyişir.
                     </p>
                   </div>
                 </div>

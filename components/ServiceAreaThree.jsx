@@ -129,7 +129,7 @@ const ServiceAreaThree = () => {
                   <div>
                     <div className="client-logo">
                       <Link href="#">
-                        <img src="assets/img/client/1.png" alt="Fixturbo" />
+                        <img src="assets/img/client/1.png" alt="İberAuto" />
                       </Link>
                     </div>
                   </div>
@@ -138,7 +138,7 @@ const ServiceAreaThree = () => {
                   <div>
                     <div className="client-logo">
                       <Link href="#">
-                        <img src="assets/img/client/2.png" alt="Fixturbo" />
+                        <img src="assets/img/client/2.png" alt="İberAuto" />
                       </Link>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ const ServiceAreaThree = () => {
                   <div>
                     <div className="client-logo">
                       <Link href="#">
-                        <img src="assets/img/client/3.png" alt="Fixturbo" />
+                        <img src="assets/img/client/3.png" alt="İberAuto" />
                       </Link>
                     </div>
                   </div>
@@ -156,7 +156,7 @@ const ServiceAreaThree = () => {
                   <div>
                     <div className="client-logo">
                       <Link href="#">
-                        <img src="assets/img/client/4.png" alt="Fixturbo" />
+                        <img src="assets/img/client/4.png" alt="İberAuto" />
                       </Link>
                     </div>
                   </div>
@@ -165,7 +165,7 @@ const ServiceAreaThree = () => {
                   <div>
                     <div className="client-logo">
                       <Link href="#">
-                        <img src="assets/img/client/5.png" alt="Fixturbo" />
+                        <img src="assets/img/client/5.png" alt="İberAuto" />
                       </Link>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ const ServiceAreaThree = () => {
                   <div>
                     <div className="client-logo">
                       <Link href="#">
-                        <img src="assets/img/client/3.png" alt="Fixturbo" />
+                        <img src="assets/img/client/3.png" alt="İberAuto" />
                       </Link>
                     </div>
                   </div>

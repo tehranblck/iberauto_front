@@ -1,14 +1,48 @@
 'use client'
 import React, { useState } from "react";
-import Slider from "rc-slider";
 import Link from "next/link";
+import ProductCard from "./ProductCard";
+import { products } from "../utils/productData";
 
 const ShopArea = () => {
   const [range, setRange] = useState([0, 100]);
+  const [selectedCarBrand, setSelectedCarBrand] = useState("");
+  const [selectedCarModel, setSelectedCarModel] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [expandedBrand, setExpandedBrand] = useState("");
 
   const handleRangeChange = (value) => {
     setRange(value);
   };
+
+  const handleCarBrandChange = (brand) => {
+    setSelectedCarBrand(brand);
+    setSelectedCarModel("");
+    setExpandedBrand(brand === expandedBrand ? "" : brand);
+  };
+
+  const handleCarModelChange = (model) => {
+    setSelectedCarModel(model);
+  };
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  // Filtrelenmiş ürünleri hesapla
+  const filteredProducts = products.filter(product => {
+    const matchesCarBrand = !selectedCarBrand || product.carBrand === selectedCarBrand;
+    const matchesCarModel = !selectedCarModel || product.carModel === selectedCarModel;
+    const matchesCategory = !selectedCategory || product.category === selectedCategory;
+    return matchesCarBrand && matchesCarModel && matchesCategory;
+  });
+
+  // Benzersiz araba markalarını al
+  const uniqueCarBrands = Array.from(new Set(products.map(p => p.carBrand)));
+
+  // Benzersiz kategorileri al
+  const uniqueCategories = Array.from(new Set(products.map(p => p.category)));
+
   return (
     <section className="space-top space-extra-bottom">
       <div className="container">
@@ -18,7 +52,7 @@ const ShopArea = () => {
               <div className="row justify-content-between align-items-center">
                 <div className="col-md">
                   <p className="woocommerce-result-count">
-                    52 nəticədən 1–15 göstərilir
+                    {filteredProducts.length}+ nəticədən 1–{filteredProducts.length} göstərilir
                   </p>
                 </div>
                 <div className="col-md-auto">
@@ -31,10 +65,7 @@ const ShopArea = () => {
                         defaultValue={"Choose"}
                       >
                         <option value="Choose">Standart Sıralama</option>
-                        <option value="popularity">Populyarlığa görə sırala</option>
-                        <option value="rating">Orta reytinqə görə sırala</option>
-                        <option value="date">Ən sona görə sırala</option>
-                        <option value="price">
+                        <option value="date">
                           Qiymətə görə sırala: aşağıdan yuxarıya
                         </option>
                         <option value="price-desc">
@@ -48,258 +79,11 @@ const ShopArea = () => {
               </div>
             </div>
             <div className="row gy-4">
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-1.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Mühərrik pistonları və dişli</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
+              {filteredProducts.map((product) => (
+                <div key={product.id} className="col-xl-4 col-md-6">
+                  <ProductCard product={product} />
                 </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-2.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Egzoz manifoldu</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al  <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-3.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Ön şüşə silgici mühərriki</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-4.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Güc idarəetmə nasosu</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al  <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-5.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Ön şüşə silgici mühərriki</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al  <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-6.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Egzoz manifoldu</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-7.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Mühərrik pistonları və dişli</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-8.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Egzoz manifoldu</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="product-card style2">
-                  <div className="product-img">
-                    <img
-                      src="assets/img/update-img/product/1-9.png"
-                      alt="Fixturbo"
-                    />
-                  </div>
-                  <div className="product-content">
-                    <h3 className="product-title">
-                      <Link href="/shop-details">Ön şüşə silgici mühərriki</Link>
-                    </h3>
-                    <span className="star-rating">
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                      <i className="fas fa-star" />
-                    </span>
-                    <span className="price">
-                      <del>$30</del> $25
-                    </span>
-                    <Link href="#" className="link-btn">
-                      Məhsulu al <i className="fas fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="pagination justify-content-center mt-70">
               <ul>
@@ -331,45 +115,107 @@ const ShopArea = () => {
                   </button>
                 </form>
               </div>
-              <div className="widget widget_categories  ">
-                <h3 className="widget_title">Məhsul kateqoriyaları</h3>
-                <ul>
-                  <li>
-                    <Link href="/service-details">Sükan</Link>
-                    <span>(12)</span>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Asqı yayı</Link>{" "}
-                    <span>(12)</span>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Arxa işıq</Link>
-                    <span>(08)</span>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Ötürücü</Link>
-                    <span>(13)</span>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Ön şüşə silgici mühərriki</Link>
-                    <span>(03)</span>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Yanacaq enjektoru</Link>
-                    <span>(03)</span>
-                  </li>
-                  <li>
-                    <Link href="/service-details">Məhsulunuzu tapın</Link>
-                    <span>(03)</span>
-                  </li>
-                </ul>
+              <div className="widget widget_categories">
+                <h3 className="widget_title">Avtomobil Seçimi</h3>
+                <div className="car-selection">
+                  {uniqueCarBrands.map((carBrand) => {
+                    const brandModels = Array.from(
+                      new Set(
+                        products
+                          .filter((p) => p.carBrand === carBrand)
+                          .map((p) => p.carModel)
+                      )
+                    );
+
+                    return (
+                      <div key={carBrand} className="car-brand-item">
+                        <div
+                          className={`car-brand-header ${expandedBrand === carBrand ? 'active' : ''}`}
+                          onClick={() => handleCarBrandChange(carBrand)}
+                        >
+                          <span>{carBrand}</span>
+                          <i className={`fas fa-chevron-${expandedBrand === carBrand ? 'up' : 'down'}`} />
+                        </div>
+                        {expandedBrand === carBrand && (
+                          <div className="car-models-list">
+                            {brandModels.map((model) => (
+                              <div
+                                key={model}
+                                className={`car-model-item ${selectedCarModel === model ? 'selected' : ''}`}
+                                onClick={() => handleCarModelChange(model)}
+                              >
+                                {model}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-
-
+              <div className="widget widget_categories">
+                <h3 className="widget_title">Kateqoriya</h3>
+                <select
+                  className="form-select"
+                  value={selectedCategory}
+                  onChange={handleCategoryChange}
+                >
+                  <option value="">Bütün Kateqoriyalar</option>
+                  {uniqueCategories.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </aside>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .car-selection {
+          border: 1px solid #e5e5e5;
+          border-radius: 4px;
+        }
+        .car-brand-item {
+          border-bottom: 1px solid #e5e5e5;
+        }
+        .car-brand-item:last-child {
+          border-bottom: none;
+        }
+        .car-brand-header {
+          padding: 12px 15px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f8f8f8;
+          transition: all 0.3s ease;
+        }
+        .car-brand-header:hover {
+          background-color: #f0f0f0;
+        }
+        .car-brand-header.active {
+          background-color: #e5e5e5;
+        }
+        .car-models-list {
+          padding: 10px 15px;
+          background-color: #fff;
+        }
+        .car-model-item {
+          padding: 8px 0;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .car-model-item:hover {
+          color: #007bff;
+        }
+        .car-model-item.selected {
+          color: #007bff;
+          font-weight: bold;
+        }
+      `}</style>
     </section>
   );
 };
