@@ -1,9 +1,9 @@
-import Breadcrumb from "@/components/Breadcrumb";
-import FooterAreaOne from "@/components/FooterAreaOne";
-import HeaderOne from "@/components/HeaderOne";
-import ServiceDetails from "@/components/ServiceDetails";
-import SubscribeOne from "@/components/SubscribeOne";
-import Preloader from "@/helper/Preloader";
+import Breadcrumb from "../../../components/Breadcrumb";
+import FooterAreaOne from "../../../components/FooterAreaOne";
+import HeaderOne from "../../../components/HeaderOne";
+import ServiceDetails from "../../../components/ServiceDetails";
+import SubscribeOne from "../../../components/SubscribeOne";
+import Preloader from "../../../helper/Preloader";
 
 export const metadata = {
   title: "Service Details || Fixturbo - Car Repair & Auto Services NEXT Js Template",
@@ -16,22 +16,22 @@ const page = () => {
   return (
     <>
       {/* Preloader */}
- <Preloader />
+      <Preloader />
 
-         {/* Header one */}
-         <HeaderOne />
+      {/* Header one */}
+      <HeaderOne />
 
-{/* Breadcrumb */}
-<Breadcrumb title={"Service Details"} />
+      {/* Breadcrumb */}
+      <Breadcrumb title={"Service Details"} />
 
-{/* Service Details */}
-<ServiceDetails />
+      {/* Service Details */}
+      <ServiceDetails />
 
-{/* Subscribe One */}
-<SubscribeOne />
+      {/* Subscribe One */}
+      <SubscribeOne />
 
-{/* Footer Area One */}
-<FooterAreaOne />
+      {/* Footer Area One */}
+      <FooterAreaOne />
     </>
   );
 };

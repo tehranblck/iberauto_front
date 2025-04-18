@@ -1,9 +1,9 @@
-import Breadcrumb from "@/components/Breadcrumb";
-import FooterAreaOne from "@/components/FooterAreaOne";
-import HeaderOne from "@/components/HeaderOne";
-import PortfolioOne from "@/components/PortfolioOne";
-import SubscribeOne from "@/components/SubscribeOne";
-import Preloader from "@/helper/Preloader";
+import Breadcrumb from "../../../components/Breadcrumb";
+import FooterAreaOne from "../../../components/FooterAreaOne";
+import HeaderOne from "../../../components/HeaderOne";
+import PortfolioOne from "../../../components/PortfolioOne";
+import SubscribeOne from "../../../components/SubscribeOne";
+import Preloader from "../../../helper/Preloader";
 
 export const metadata = {
   title: "Project || Fixturbo - Car Repair & Auto Services NEXT Js Template",
@@ -16,7 +16,7 @@ const page = () => {
   return (
     <>
       {/* Preloader */}
- <Preloader />
+      <Preloader />
 
       {/* Header one */}
       <HeaderOne />
