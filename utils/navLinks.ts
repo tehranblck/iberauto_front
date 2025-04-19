@@ -38,19 +38,19 @@ export const footerCompanyLinks = [
 
 export const footerProductLinks = [
     {
-        title: "Mühərrik Parçaları",
+        title: "Mühərrik Hissələri",
         path: "/shop?category=engine",
     },
     {
-        title: "Süspansiya Parçaları",
+        title: "Süspansiya Hissələri",
         path: "/shop?category=suspension",
     },
     {
-        title: "Fren Sistemi Parçaları",
+        title: "Fren Sistemi Hissələri",
         path: "/shop?category=brake",
     },
     {
-        title: "Elektrik Sistemi Parçaları",
+        title: "Elektrik Sistemi Hissələri",
         path: "/shop?category=electrical",
     },
     {

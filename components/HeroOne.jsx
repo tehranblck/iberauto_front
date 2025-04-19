@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -12,15 +13,15 @@ const HeroOne = () => {
         <div className="row flex-row-reverse">
           <div style={{ alignSelf: 'flex-start', marginBottom: '10px' }} className="col-xl-6 ">
             <div className="hero-style1">
-              <span className="sub-title text-white">Ən etibarlı avtomobil parçaları</span>
+              <span className="sub-title text-white">Ən etibarlı avtomobil Hissələri</span>
               <h1 className="hero-title text-white">
 
-                Keyfiyyətli Avtomobil Parçaları
+                Keyfiyyətli Avtomobil ehtiyat hissələri
               </h1>
               <p className="hero-text text-white">
-                Bütün marka və modellər üçün orijinal və keyfiyyətli avtomobil parçaları.
+                Bütün marka və modellər üçün orijinal və keyfiyyətli avtomobil ehtiyat hissələri.
                 Geniş çeşid, sürətli çatdırılma və ən yaxşı qiymətlərlə sizə xidmət edirik.
-                Avtomobiliniz üçün lazım olan bütün parçaları bir yerdə tapın.
+                Avtomobiliniz üçün lazım olan bütün ehtiyat hissələrini bir yerdə tapın.
               </p>
               <div className="btn-group">
                 <Link href="/shop" className="btn">
@@ -34,7 +35,7 @@ const HeroOne = () => {
           </div>
           <div style={{ alignSelf: 'flex-end' }} className="col-xl-6">
             <div className="hero-thumb bottom-0 text-center">
-              <img src="assets/img/hero/hero_thumb_1_1.png" alt="IberAuto" />
+              <Image src="/assets/img/hero/hero_thumb_1_1.png" alt="IberAuto" width={500} height={500} />
             </div>
           </div>
         </div>

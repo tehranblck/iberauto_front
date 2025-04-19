@@ -1,18 +1,15 @@
-
 import AboutTwo from "../../../components/AboutTwo";
 import Breadcrumb from "../../../components/Breadcrumb";
-import FooterAreaOne from "../../../components/FooterAreaOne";
-import HeaderOne from "../../../components/HeaderOne";
 import SubscribeOne from "../../../components/SubscribeOne";
 import TestimonialOne from "../../../components/TestimonialOne";
 import Preloader from "../../../helper/Preloader";
+import './../../globals.scss'
 
 export const metadata = {
-  title: "Haqqımızda || IberAuto - Avtomobil Parçaları",
+  title: "Haqqımızda || IberAuto - Avtomobil Hissələri",
   description:
-    "IberAuto - Avtomobil Parçaları",
+    "IberAuto - Avtomobil Hissələri",
 };
-
 
 const page = () => {
   return (
@@ -20,27 +17,17 @@ const page = () => {
       {/* Preloader */}
       <Preloader />
 
-      {/* Header one */}
-      <HeaderOne />
-
       {/* Breadcrumb */}
       <Breadcrumb title={"Haqqımızda"} />
 
       {/* About Area */}
       <AboutTwo />
 
-
-
       {/* Testimonial One */}
       <TestimonialOne />
 
-
-
       {/* Subscribe One */}
       <SubscribeOne />
-
-      {/* Footer Area One */}
-      <FooterAreaOne />
     </>
   );
 };

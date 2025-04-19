@@ -1,6 +1,34 @@
+"use client"
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const FaqAreaOne = () => {
+  const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const response = await fetch('https://api.iberauto.az/api/faqs?populate=*');
+        if (!response.ok) {
+          throw new Error('API yanıt vermedi');
+        }
+        const data = await response.json();
+        setFaqs(data.data);
+        setLoading(false);
+      } catch (err) {
+        console.error('FAQ Hatası:', err);
+        setLoading(false);
+      }
+    };
+
+    fetchFaqs();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center py-5">Yüklənir...</div>;
+  }
+
   return (
     <section style={{ marginTop: "120px" }} className="faq-area-1 space-bottom">
       <div className="container">
@@ -9,10 +37,10 @@ const FaqAreaOne = () => {
             <div className="title-area mb-lg-0">
               <span className="sub-title">Tez-tez verilən suallar</span>
               <h2 className="sec-title">
-                Avtomobil Parçaları Haqqında Suallar
+                Ehtiyat hissələri haqqında suallar
               </h2>
               <p className="sec-text">
-                Avtomobil parçaları satın alırkən diqqət etməli olduğunuz məqamlar və sifariş prosesi haqqında məlumat.
+                Avtomobil ehtiyat hissələri satın alırkən diqqət etməli olduğunuz məqamlar və sifariş prosesi haqqında məlumat.
               </p>
               <div className="btn-wrap mt-30">
                 <Link className="btn style2" href="/contact">
@@ -23,114 +51,34 @@ const FaqAreaOne = () => {
           </div>
           <div className="col-lg-6">
             <div className="accordion-area accordion" id="faqAccordion">
-              <div className="accordion-card active">
-                <div className="accordion-header" id="collapse-item-1">
-                  <button
-                    className="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-1"
-                    aria-expanded="true"
-                    aria-controls="collapse-1"
+              {faqs.map((faq, index) => (
+                <div key={faq.id} className={`accordion-card ${index === 0 ? 'active' : ''}`}>
+                  <div className="accordion-header" id={`collapse-item-${faq.id}`}>
+                    <button
+                      className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapse-${faq.id}`}
+                      aria-expanded={index === 0 ? "true" : "false"}
+                      aria-controls={`collapse-${faq.id}`}
+                    >
+                      {faq.sual}
+                    </button>
+                  </div>
+                  <div
+                    id={`collapse-${faq.id}`}
+                    className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
+                    aria-labelledby={`collapse-item-${faq.id}`}
+                    data-bs-parent="#faqAccordion"
                   >
-                    Orijinal parçaları necə təmin edirsiniz?
-                  </button>
-                </div>
-                <div
-                  id="collapse-1"
-                  className="accordion-collapse collapse show"
-                  aria-labelledby="collapse-item-1"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    <p className="faq-text">
-                      Bütün parçalarımız rəsmi distribütorlardan və etibarlı təchizatçılardan təmin edilir.
-                      Hər bir parça üçün orijinallıq sertifikatı və zəmanət təqdim edirik.
-                    </p>
+                    <div className="accordion-body">
+                      <p className="faq-text">
+                        {faq.cavab}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="accordion-card">
-                <div className="accordion-header" id="collapse-item-2">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-2"
-                    aria-expanded="false"
-                    aria-controls="collapse-2"
-                  >
-                    Sifariş etdiyim parçalar nə qədər müddətdə çatdırılır?
-                  </button>
-                </div>
-                <div
-                  id="collapse-2"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="collapse-item-2"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    <p className="faq-text">
-                      Stokda olan parçalar 1-2 iş günü ərzində çatdırılır. Xüsusi sifarişlər üçün
-                      çatdırılma müddəti parçanın növündən və təchizatçıdan asılı olaraq dəyişir.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-card">
-                <div className="accordion-header" id="collapse-item-3">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-3"
-                    aria-expanded="false"
-                    aria-controls="collapse-3"
-                  >
-                    Hansı ödəniş üsullarını qəbul edirsiniz?
-                  </button>
-                </div>
-                <div
-                  id="collapse-3"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="collapse-item-3"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    <p className="faq-text">
-                      Nağd ödəniş, bank kartı və bank köçürməsi ilə ödəniş qəbul edirik.
-                      Həmçinin, bəzi bankların təklif etdiyi taksit imkanlarından da yararlana bilərsiniz.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-card">
-                <div className="accordion-header" id="collapse-item-4">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-4"
-                    aria-expanded="false"
-                    aria-controls="collapse-4"
-                  >
-                    Zəmanət şərtləriniz nələrdir?
-                  </button>
-                </div>
-                <div
-                  id="collapse-4"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="collapse-item-4"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    <p className="faq-text">
-                      Bütün orijinal parçalarımız üçün istehsalçı zəmanəti təqdim edirik.
-                      Zəmanət müddəti parçanın növündən asılı olaraq 6 ay ilə 2 il arasında dəyişir.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

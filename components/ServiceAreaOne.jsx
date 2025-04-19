@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +12,7 @@ const ServiceAreaOne = () => {
             <div className="title-area text-center">
               <span className="sub-title">Məhsul Kateqoriyaları</span>
               <h2 className="sec-title">
-                Avtomobil Parçaları Kateqoriyaları
+                Avtomobil hissələri kateqoriyaları
               </h2>
             </div>
           </div>
@@ -20,15 +21,15 @@ const ServiceAreaOne = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-card">
               <div className="service-card_icon">
-                <img src="assets/img/icon/service-icon_1-1.svg" alt="IberAuto" />
+                <Image src="/assets/img/icon/service-icon_1-1.svg" alt="IberAuto" width={50} height={50} />
               </div>
               <h4 className="service-card_title">
-                <Link href="/products">Mühərrik Parçaları</Link>
+                <Link href="/shop">Mühərrik hissələri</Link>
               </h4>
               <p className="service-card_text">
-                Bütün marka və modellər üçün mühərrik parçaları
+                Bütün marka və modellər üçün mühərrik hissələri
               </p>
-              <Link href="/products" className="link-btn">
+              <Link href="/shop" className="link-btn">
                 Daha çox <i className="fas fa-arrow-right" />
               </Link>
             </div>
@@ -36,15 +37,15 @@ const ServiceAreaOne = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-card">
               <div className="service-card_icon">
-                <img src="assets/img/icon/service-icon_1-2.svg" alt="IberAuto" />
+                <Image src="/assets/img/icon/service-icon_1-2.svg" alt="IberAuto" width={50} height={50} />
               </div>
               <h4 className="service-card_title">
-                <Link href="/products">Süspansiya Parçaları</Link>
+                <Link href="/shop">Süspansiya hissələri</Link>
               </h4>
               <p className="service-card_text">
                 Amortizatorlar, yaylar və digər süspansiya komponentləri
               </p>
-              <Link href="/products" className="link-btn">
+              <Link href="/shop" className="link-btn">
                 Daha çox <i className="fas fa-arrow-right" />
               </Link>
             </div>
@@ -52,15 +53,15 @@ const ServiceAreaOne = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-card">
               <div className="service-card_icon">
-                <img src="assets/img/icon/service-icon_1-3.svg" alt="IberAuto" />
+                <Image src="/assets/img/icon/service-icon_1-3.svg" alt="IberAuto" width={50} height={50} />
               </div>
               <h4 className="service-card_title">
-                <Link href="/products">Fren Sistemi Parçaları</Link>
+                <Link href="/shop">Fren sistemi hissələri</Link>
               </h4>
               <p className="service-card_text">
                 Fren balataları, disk və digər fren sistemi komponentləri
               </p>
-              <Link href="/products" className="link-btn">
+              <Link href="/shop" className="link-btn">
                 Daha çox <i className="fas fa-arrow-right" />
               </Link>
             </div>

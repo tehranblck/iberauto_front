@@ -11,9 +11,9 @@ import Animation from "../helper/Animation";
 import Preloader from "../helper/Preloader";
 
 export const metadata = {
-  title: "Ana Səhifə || IberAuto - Avtomobil Parçaları Satışı",
+  title: "Ana Səhifə || IberAuto - Avtomobil Hissələri Satışı",
   description:
-    "IberAuto - Bütün marka və modellər üçün orijinal və keyfiyyətli avtomobil parçaları",
+    "IberAuto - Bütün marka və modellər üçün orijinal və keyfiyyətli avtomobil Hissələri",
 };
 
 const page = () => {
@@ -50,7 +50,6 @@ const page = () => {
       <FaqAreaOne />
 
       {/* Footer Area One */}
-      <FooterAreaOne />
     </>
   );
 };

@@ -1,69 +1,68 @@
 "use client";
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { products } from "../utils/productData";
 import ProductCard from "./ProductCard";
 
-const ShopDetails = ({ productId }) => {
-  const product = products.find(p => p.id === parseInt(productId));
+const ShopDetails = ({ product }) => {
+  if (!product) return null;
+  console.log(product)
   const relatedProducts = products.filter(p => p.category === product?.category && p.id !== product?.id);
 
-  if (!product) {
-    return <div>Məhsul tapılmadı</div>;
-  }
-
   return (
-    <section className="product-details space-top">
+    <section className="space-top space-extra-bottom">
       <div className="container">
-        <div className="row gx-80">
+        <div className="row">
           <div className="col-lg-6">
-            <div className="product-thumb">
-              <div className="img">
-                <img src={product.image} alt={product.title} />
-              </div>
-              <div className="product-tag">Sale</div>
+            <div className="product-image">
+              <Image
+                src={
+                  product?.foto?.formats?.large?.url
+                    ? `https://api.iberauto.az${product.foto.formats.large.url}`
+                    : product?.foto?.url
+                      ? `https://api.iberauto.az${product.foto.url}`
+                      : '/assets/img/no-image.png'
+                }
+                alt={product?.mehsul_adi || 'Məhsul şəkli'}
+                width={1200}
+                height={1200}
+                quality={100}
+                className="img-fluid"
+              />
             </div>
           </div>
-          <div className="col-lg-6 align-self-center">
-            <div className="product-about">
-              <h2 className="product-title">{product.title}</h2>
-              <div className="product-specs">
-                <table className="specs-table">
-                  <tbody>
-                    <tr>
-                      <th>Marka:</th>
-                      <td>{product.brand || "IberAuto"}</td>
-                    </tr>
-                    <tr>
-                      <th>Model:</th>
-                      <td>{product.model || "N/A"}</td>
-                    </tr>
-                    <tr>
-                      <th>Məhsul Kodu:</th>
-                      <td>{product.code || `IBER-${product.id}`}</td>
-                    </tr>
-                    <tr>
-                      <th>İstehsalçı:</th>
-                      <td>{product.manufacturer || "IberAuto"}</td>
-                    </tr>
-                    <tr>
-                      <th>İstehsalçı Kodu:</th>
-                      <td>{product.manufacturerCode || `IBER-MC-${product.id}`}</td>
-                    </tr>
-                    <tr>
-                      <th>Qiymət:</th>
-                      <td className="price">
-                        {product.price}
-                        {product.oldPrice && <del>{product.oldPrice}</del>}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+          <div className="col-lg-6">
+            <div className="product-details">
+              <h2 className="product-title">{product?.mehsul_adi}</h2>
+              <div className="product-meta">
+                <div className="meta-item">
+                  <i className="fas fa-car"></i>
+                  <span>{product?.marka_adi}</span>
+                </div>
+                <div className="meta-item">
+                  <i className="fas fa-tag"></i>
+                  <span>{product?.model}</span>
+                </div>
+                <div className="meta-item">
+                  <i className="fas fa-barcode"></i>
+                  <span>{product?.kod}</span>
+                </div>
+                {product?.oem && (
+                  <div className="meta-item">
+                    <i className="fas fa-cog"></i>
+                    <span>OEM: {product.oem}</span>
+                  </div>
+                )}
+              </div>
+              <div className="product-price">
+                <span className="price">{product?.qiymet} ₼</span>
               </div>
               <div className="product-actions">
-                <button className="btn style2">Sifariş et</button>
-                <Link href="/products" className="btn style-border2">
-                  Geri qayıt
+                <Link href="/contact" className="btn btn-danger">
+                  <i className="fas fa-shopping-cart me-2"></i>
+                  Sifariş et
                 </Link>
               </div>
             </div>
@@ -93,8 +92,63 @@ const ShopDetails = ({ productId }) => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .product-image {
+          margin-bottom: 30px;
+          border: 1px solid #e5e5e5;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+        .product-title {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: #333;
+        }
+        .product-meta {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+        .meta-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 15px;
+          background-color: #f8f8f8;
+          border-radius: 4px;
+        }
+        .meta-item i {
+          color: #dc3545;
+          width: 20px;
+        }
+        .product-price {
+          font-size: 24px;
+          color: #dc3545;
+          margin-bottom: 20px;
+        }
+        .product-actions {
+          margin-top: 30px;
+        }
+        .btn-danger {
+          padding: 12px 30px;
+          font-size: 16px;
+        }
+        @media (max-width: 768px) {
+          .product-title {
+            font-size: 20px;
+          }
+          .product-price {
+            font-size: 20px;
+          }
+          .btn-danger {
+            width: 100%;
+          }
+        }
+      `}</style>
     </section>
   );
 };
 
 export default ShopDetails;
+

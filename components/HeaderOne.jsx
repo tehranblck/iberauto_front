@@ -66,7 +66,9 @@ const HeaderOne = () => {
                     </li>
                     <li>
                       <i className="fas fa-map-marker-alt" />
-                      Bakı şəhəri, Azərbaycan
+                      <Link target="_blank" href="https://maps.app.goo.gl/dEhz9K8yBK7SebQ2A">
+                        Bakı şəhəri, Qarda
+                      </Link>
                     </li>
                     <li>
                       <i className="fas fa-clock" />
@@ -141,8 +143,8 @@ const HeaderOne = () => {
                     <img src="assets/img/icon/chat.svg" alt="IberAuto" />
                     <div className="navbar-right-desc-details">
                       <h6 className="title">Köməyə ehtiyac var?</h6>
-                      <Link className="link" href="tel:+994514444444">
-                        +994 51 444 44 44
+                      <Link className="link" href="tel:+994551004038">
+                        +994 55 100 40 38
                       </Link>
                     </div>
                   </div>

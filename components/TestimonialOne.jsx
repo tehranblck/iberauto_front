@@ -1,9 +1,36 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
+import Image from "next/image";
 
 const TestimonialOne = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch('https://api.iberauto.az/api/testimonials?populate=*');
+        if (!response.ok) {
+          throw new Error('API yanıt vermedi');
+        }
+        const data = await response.json();
+        setTestimonials(data.data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Testimonial Hatası:', err);
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center py-5">Yüklənir...</div>;
+  }
+
   return (
     <div
       className="testimonial-area-1 overflow-hidden"
@@ -13,7 +40,7 @@ const TestimonialOne = () => {
         <div className="row">
           <div className="col-lg-6">
             <div className="testimonial-thumb1">
-              <img src="assets/img/bg/testimonial-1-1.png" alt="IberAuto" />
+              <Image src="/assets/img/bg/testimonial-1-1.png" alt="IberAuto" width={500} height={500} />
             </div>
           </div>
           <div className="col-lg-6">
@@ -21,7 +48,7 @@ const TestimonialOne = () => {
               <div className="title-area">
                 <span className="sub-title">Müştərilərimizin Rəyləri</span>
                 <h2 className="sec-title text-white">
-                  Orijinal və Keyfiyyətli <br /> Avtomobil Parçaları
+                  Orijinal və Keyfiyyətli <br /> Avtomobil Hissələri
                 </h2>
               </div>
               <div className="row global-carousel testi-slider-1">
@@ -47,90 +74,35 @@ const TestimonialOne = () => {
                     1400: { slidesPerView: 1 },
                   }}
                 >
-                  <SwiperSlide>
-                    <div>
-                      <div className="testi-card">
-                        <div className="testi-card_content">
-                          <div className="testi-card-profile">
-                            <div className="testi-card-profile-details">
-                              <h4 className="testi-profile-title">Nəfiz Bhuian</h4>
-                              <span className="testi-profile-desig">Müştəri</span>
+                  {testimonials.map((testimonial) => (
+                    <SwiperSlide key={testimonial.id}>
+                      <div>
+                        <div className="testi-card">
+                          <div className="testi-card_content">
+                            <div className="testi-card-profile">
+                              <div className="testi-card-profile-details">
+                                <h4 className="testi-profile-title">{testimonial.ad_soyad}</h4>
+                                <span className="testi-profile-desig">{testimonial.client}</span>
+                              </div>
+                              <div className="quote-icon">
+                                <Image src="/assets/img/icon/quote1-1.svg" alt="IberAuto" width={50} height={50} />
+                              </div>
                             </div>
-                            <div className="quote-icon">
-                              <img src="assets/img/icon/quote1-1.svg" alt="IberAuto" />
+                            <p className="testi-card_text">
+                              {testimonial.rey}
+                            </p>
+                            <div className="rating">
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
+                              <i className="fas fa-star" />
                             </div>
-                          </div>
-                          <p className="testi-card_text">
-                            IberAuto-dan aldığım mühərrik parçaları çox keyfiyyətli və orijinaldır.
-                            Sürətli çatdırılma xidməti və peşəkar məsləhət xidməti ilə məmnun qaldım.
-                          </p>
-                          <div className="rating">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div>
-                      <div className="testi-card">
-                        <div className="testi-card_content">
-                          <div className="testi-card-profile">
-                            <div className="testi-card-profile-details">
-                              <h4 className="testi-profile-title">Əli Hüseynov</h4>
-                              <span className="testi-profile-desig">Müştəri</span>
-                            </div>
-                            <div className="quote-icon">
-                              <img src="assets/img/icon/quote1-1.svg" alt="IberAuto" />
-                            </div>
-                          </div>
-                          <p className="testi-card_text">
-                            Geniş məhsul çeşidi və rəqabətli qiymətlərlə avtomobilim üçün lazım olan
-                            bütün parçaları tapa bilirəm. Xidmət keyfiyyəti və müştəri məmnuniyyəti çox yüksəkdir.
-                          </p>
-                          <div className="rating">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div>
-                      <div className="testi-card">
-                        <div className="testi-card_content">
-                          <div className="testi-card-profile">
-                            <div className="testi-card-profile-details">
-                              <h4 className="testi-profile-title">Vüsal Əliyev</h4>
-                              <span className="testi-profile-desig">Müştəri</span>
-                            </div>
-                            <div className="quote-icon">
-                              <img src="assets/img/icon/quote1-1.svg" alt="IberAuto" />
-                            </div>
-                          </div>
-                          <p className="testi-card_text">
-                            Bütün marka və modellər üçün orijinal parçalar tapa bilmək çox rahatdır.
-                            Peşəkar komanda və sürətli çatdırılma xidməti ilə daim əməkdaşlıq edirəm.
-                          </p>
-                          <div className="rating">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
 
                 <div className="testimonialOne arrow">

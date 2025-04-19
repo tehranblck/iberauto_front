@@ -1,6 +1,7 @@
 "use client";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
+import Image from "next/image";
 
 const CounterOne = () => {
   return (
@@ -54,9 +55,11 @@ const CounterOne = () => {
                         <p className="counter-card_text">Marka</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-2.svg"
+                        <Image
+                          src="/assets/img/icon/counter-icon_1-2.svg"
                           alt="IberAuto"
+                          width={50}
+                          height={50}
                         />
                       </div>
                     </div>
@@ -79,9 +82,11 @@ const CounterOne = () => {
                         <p className="counter-card_text">Məmnun Müştəri</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-3.svg"
+                        <Image
+                          src="/assets/img/icon/counter-icon_1-3.svg"
                           alt="IberAuto"
+                          width={50}
+                          height={50}
                         />
                       </div>
                     </div>
@@ -104,9 +109,11 @@ const CounterOne = () => {
                         <p className="counter-card_text">İl Təcrübə</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-4.svg"
+                        <Image
+                          src="/assets/img/icon/counter-icon_1-4.svg"
                           alt="IberAuto"
+                          width={50}
+                          height={50}
                         />
                       </div>
                     </div>
@@ -127,7 +134,7 @@ const CounterOne = () => {
                   <ul>
                     <li>
                       <i className="fas fa-check" />
-                      Orijinal və Keyfiyyətli Parçalar
+                      Orijinal və Keyfiyyətli Məhsullar
                     </li>
                     <li>
                       <i className="fas fa-check" />
@@ -141,13 +148,13 @@ const CounterOne = () => {
                 </div>
                 <div className="call-media-wrap">
                   <div className="icon">
-                    <img src="assets/img/icon/phone-1.svg" alt="IberAuto" />
+                    <Image src="/assets/img/icon/phone-1.svg" alt="IberAuto" width={50} height={50} />
                   </div>
                   <div className="media-body">
                     <h6 className="title text-white">Zəng Üçün Müraciət:</h6>
                     <h4 className="link">
-                      <a className="text-white" href="tel:+994514444444">
-                        +994 51 444 44 44
+                      <a className="text-white" href="tel:+994551004038">
+                        +994 55 100 40 38
                       </a>
                     </h4>
                   </div>

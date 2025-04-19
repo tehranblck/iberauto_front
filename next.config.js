@@ -9,6 +9,7 @@ const nextConfig = {
                 hostname: "api.iberauto.az",
             },
         ],
+        domains: ['api.iberauto.az'],
     },
 };
 
