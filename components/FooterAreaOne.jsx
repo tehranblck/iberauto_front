@@ -109,7 +109,7 @@ const FooterAreaOne = () => {
                 Copyright © {new Date().getFullYear()} <Link href="/">IberAuto</Link>. Bütün hüquqlar qorunur.
               </p>
             </div>
-            <div className="col-lg-6 text-end">
+            <div className="col-lg-6 text-end d-none d-lg-block">
               <div className="footer-links">
                 <ul>
                   {footerBottomLinks.map((link, index) => (
@@ -117,130 +117,12 @@ const FooterAreaOne = () => {
                       <Link href={link.path}>{link.title}</Link>
                     </li>
                   ))}
-                  <li>
-                    <Link href="https://saytyarat.com" target="_blank" rel="noopener noreferrer">
-                      by Saytyarat
-                    </Link>
-                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .footer-wrapper {
-          padding: 80px 0 0;
-          background-size: cover;
-          background-position: center;
-          position: relative;
-        }
-        .widget-area {
-          padding-bottom: 40px;
-        }
-        .footer-logo {
-          margin-bottom: 25px;
-        }
-        .about-text {
-          margin-bottom: 25px;
-          color: rgba(255, 255, 255, 0.8);
-        }
-        .social-links {
-          display: flex;
-          gap: 15px;
-        }
-        .social-links a {
-          color: #fff;
-          font-size: 16px;
-          transition: all 0.3s ease;
-        }
-        .social-links a:hover {
-          color: #dc3545;
-        }
-        .widget-title {
-          color: #fff;
-          margin-bottom: 25px;
-          font-size: 20px;
-        }
-        .menu li {
-          margin-bottom: 10px;
-        }
-        .menu li a {
-          color: rgba(255, 255, 255, 0.8);
-          transition: all 0.3s ease;
-        }
-        .menu li a:hover {
-          color: #dc3545;
-          padding-left: 5px;
-        }
-        .info-box {
-          display: flex;
-          align-items: center;
-          margin-bottom: 15px;
-        }
-        .info-box_icon {
-          margin-right: 15px;
-          color: #dc3545;
-        }
-        .info-box_text {
-          color: rgba(255, 255, 255, 0.8);
-          margin: 0;
-        }
-        .info-box_text a {
-          color: rgba(255, 255, 255, 0.8);
-          transition: all 0.3s ease;
-        }
-        .info-box_text a:hover {
-          color: #dc3545;
-        }
-        .copyright-wrap {
-          padding: 20px 0;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .copyright-text {
-          color: rgba(255, 255, 255, 0.8);
-          margin: 0;
-        }
-        .copyright-text a {
-          color: #dc3545;
-        }
-        .footer-links ul {
-          display: flex;
-          justify-content: flex-end;
-          gap: 20px;
-          margin: 0;
-          padding: 0;
-        }
-        .footer-links li {
-          list-style: none;
-        }
-        .footer-links a {
-          color: rgba(255, 255, 255, 0.8);
-          transition: all 0.3s ease;
-        }
-        .footer-links a:hover {
-          color: #dc3545;
-        }
-        @media (max-width: 991px) {
-          .footer-wrapper {
-            padding: 60px 0 0;
-          }
-          .widget-area {
-            padding-bottom: 30px;
-          }
-          .widget {
-            margin-bottom: 30px;
-          }
-          .footer-links ul {
-            justify-content: center;
-            margin-top: 20px;
-          }
-          .copyright-text {
-            text-align: center;
-            margin-bottom: 20px;
-          }
-        }
-      `}</style>
     </footer>
   );
 };

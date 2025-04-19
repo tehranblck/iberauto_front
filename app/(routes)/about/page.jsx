@@ -3,7 +3,6 @@ import Breadcrumb from "../../../components/Breadcrumb";
 import SubscribeOne from "../../../components/SubscribeOne";
 import TestimonialOne from "../../../components/TestimonialOne";
 import Preloader from "../../../helper/Preloader";
-import './../../globals.scss'
 
 export const metadata = {
   title: "Haqqımızda || IberAuto - Avtomobil Hissələri",

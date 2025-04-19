@@ -126,20 +126,7 @@ const ProductDetailsPage = ({ params }) => {
                                 </table>
                             </div>
                             <div className="product-actions mt-4">
-                                <Link
-                                    target="_blank"
-                                    href={`https://wa.me/994551004038?text=${encodeURIComponent(
-                                        `Salam! Aşağıdakı məhsul haqqında məlumat almaq istəyirəm:\n\n` +
-                                        `Məhsul adı: ${product?.mehsul_adi}\n` +
-                                        `Marka: ${product?.marka_adi}\n` +
-                                        `Model: ${product?.model}\n` +
-                                        `Kod: ${product?.kod}\n` +
-                                        `${product?.oem ? `OEM: ${product.oem}\n` : ''}` +
-                                        `Qiymət: ${product?.qiymet} ₼\n\n` +
-                                        `Məhsul linki: ${window.location.href}`
-                                    )}`}
-                                    className="btn btn-danger"
-                                >
+                                <Link href="/contact" className="btn btn-danger">
                                     <i className="fas fa-shopping-cart me-2"></i>
                                     Sifariş et
                                 </Link>

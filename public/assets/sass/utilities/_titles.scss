@@ -1,22 +1,26 @@
 .sec-title {
     margin-bottom: calc(var(--section-title-space) - 43px);
     margin-top: -0.04em;
-    font-weight: 900;
+    font-weight: 700;
     position: relative;
+
     .title-bg-shape {
         position: absolute;
         left: 0;
         top: 0;
         animation: bg-anim 10s linear infinite;
+
         &.shape-center {
             left: 50%;
             transform: translate(-50%, 0);
         }
     }
 }
+
 h3.sec-title {
     margin-top: -0.2em;
-}  
+}
+
 .sub-title {
     display: block;
     line-height: 1.2;
@@ -28,6 +32,7 @@ h3.sec-title {
     font-family: $body-font;
     margin-bottom: 18px;
     letter-spacing: 0.07em;
+
     &:after,
     &:before {
         content: '';
@@ -39,21 +44,26 @@ h3.sec-title {
         margin-right: 12px;
         top: -4px;
     }
+
     &:after {
         margin-right: 0;
         margin-left: 12px;
         display: none;
     }
+
     &.text-white {
+
         &:after,
         &:before {
             background: $white-color;
         }
     }
+
     &.style2 {
         &:before {
             display: none;
         }
+
         &:after {
             margin-right: 0;
             margin-left: 12px;
@@ -61,13 +71,16 @@ h3.sec-title {
         }
     }
 }
+
 .box-title {
     font-size: 24px;
     line-height: 1.417;
     font-weight: 600;
     margin-top: -0.30em;
+
     a {
         color: inherit;
+
         &:hover {
             color: $theme-color;
         }
@@ -81,19 +94,22 @@ h3.sec-title {
     line-height: 1.667;
     margin-bottom: 0;
 }
-  
+
 .title-area {
     margin-bottom: calc(var(--section-title-space) - 13px);
     position: relative;
     z-index: 2;
+
     &.mb-0 {
         .sec-title {
             margin-bottom: 17px;
         }
     }
+
     .sub-title {
         margin-top: -0.2em;
     }
+
     &.text-center {
         .sub-title {
             &:after {
@@ -102,12 +118,14 @@ h3.sec-title {
         }
     }
 }
+
 .white-title {
     color: #fff;
     font-weight: 700;
     position: relative;
     padding-bottom: 9px;
     margin-bottom: 19px;
+
     &:after {
         content: '';
         position: absolute;
@@ -118,63 +136,79 @@ h3.sec-title {
         width: 50px;
     }
 }
+
 .page-title {
     font-weight: 900;
     margin-top: -0.3em;
 }
+
 .page-subtitle {
     font-weight: 900;
 }
+
 @include ml {
     .sec-title {
         font-size: 45px;
         line-height: 1.2;
     }
+
     .sec-text {
         margin-top: 0px;
     }
 }
+
 @include lg {
+
     .title-area,
     .sec-title {
         --section-title-space: 60px;
+
         &.mb-45 {
             margin-bottom: 36px;
         }
+
         &.mb-50 {
             margin-bottom: 40px;
         }
     }
+
     .sec-btn,
     .title-line {
         --section-title-space: 55px;
     }
+
     .sec-text {
-        font-size: 16px; 
+        font-size: 16px;
     }
 }
 
 @include md {
+
     .title-area,
     .sec-title {
         --section-title-space: 50px;
+
         &.mb-45 {
             margin-bottom: 35px;
         }
     }
+
     .sec-btn,
     .title-line {
         --section-title-space: 50px;
     }
+
     .sub-title {
         font-size: 14px;
     }
 }
+
 @include sm {
     .sec-title {
         font-size: 34px;
     }
 }
+
 @media (max-width: 390px) {
     .sec-title {
         font-size: 30px;

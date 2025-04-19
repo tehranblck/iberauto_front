@@ -67,7 +67,7 @@ const HeaderOne = () => {
                     <li>
                       <i className="fas fa-map-marker-alt" />
                       <Link target="_blank" href="https://maps.app.goo.gl/dEhz9K8yBK7SebQ2A">
-                        Bakı şəhəri, Qarda
+                        Bakı şəhəri, Qaradağ rayonu
                       </Link>
                     </li>
                     <li>
