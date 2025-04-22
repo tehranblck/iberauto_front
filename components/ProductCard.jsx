@@ -70,10 +70,10 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
                     padding: 4px 8px;
                     background-color: #f8f9fa;
                     border-radius: 4px;
-                    color: #495057;
+                    color: black;
                 }
                 .meta-item i {
-                    color: #dc3545;
+                    color: black;
                     font-size: 12px;
                 }
                 .product-footer {
@@ -85,7 +85,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
                 .price {
                     font-size: 18px;
                     font-weight: 600;
-                    color: #dc3545;
+                    color: black;
                 }
                 .link-btn {
                     padding: 8px 15px;

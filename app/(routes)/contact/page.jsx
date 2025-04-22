@@ -6,9 +6,9 @@ import SubscribeOne from "../../../components/SubscribeOne";
 import Preloader from "../../../helper/Preloader";
 
 export const metadata = {
-  title: "Əla || saytyarat - Avtomobil Təmir & Xidmət",
+  title: "Əlaqə || İberAuto - Avtomobil Təmir & Xidmət",
   description:
-    "saytyarat",
+    "İberAuto - Avtomobil Təmir & Xidmət",
 };
 
 

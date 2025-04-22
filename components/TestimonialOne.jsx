@@ -38,7 +38,7 @@ const TestimonialOne = () => {
     >
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div style={{ visibility: 'hidden' }} className="col-lg-6">
             <div className="testimonial-thumb1">
               <Image src="/assets/img/bg/testimonial-1-1.png" alt="IberAuto" width={500} height={500} />
             </div>

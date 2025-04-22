@@ -50,7 +50,7 @@ const AboutTwo = () => {
                     </TrackVisibility>
                   </h3>
                 </div>
-                <h4 className="about-year-text">İllik Təcrübə</h4>
+                <h4 className="about-year-text">5 İllik Təcrübə</h4>
               </div>
             </div>
           </div>

@@ -265,7 +265,7 @@ const ShopArea = () => {
                 <div className="col-md-6 col-12">
                   <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2">
                     <button
-                      className="btn btn-outline-danger btn-sm w-100 w-md-auto"
+                      className="btn btn-outline-primary btn-sm w-100 w-md-auto"
                       onClick={handleResetFilters}
                       disabled={!selectedCarBrand && !selectedCarModel && !searchTerm && sortOrder === "default"}
                     >
