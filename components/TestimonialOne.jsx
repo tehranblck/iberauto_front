@@ -34,7 +34,7 @@ const TestimonialOne = () => {
   return (
     <div
       className="testimonial-area-1 overflow-hidden"
-      style={{ backgroundImage: "url(assets/img/bg/testimonial-bg1-1.png)" }}
+      style={{ backgroundImage: "url(assets/img/bg/testimonial-bg1-1.png)", backgroundSize: 'cover', backgroundAttachment: 'fixed' }}
     >
       <div className="container">
         <div className="row">

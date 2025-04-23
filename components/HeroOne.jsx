@@ -7,7 +7,7 @@ const HeroOne = () => {
     <div
       className="hero-wrapper hero-1"
       id="hero"
-      style={{ backgroundImage: "url(assets/img/hero/hero.png)", backgroundSize: 'cover' }}
+      style={{ backgroundImage: "url(assets/img/hero/hero.png)", backgroundSize: 'cover', backgroundAttachment: 'fixed' }}
     >
       <div className="container">
         <div className="row flex-row-reverse">

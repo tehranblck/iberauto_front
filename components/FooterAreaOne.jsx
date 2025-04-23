@@ -6,7 +6,7 @@ const FooterAreaOne = () => {
   return (
     <footer
       className="footer-wrapper footer-layout1"
-      style={{ backgroundImage: "url(assets/img/bg/footer-bg1-1.png)" }}
+      style={{ backgroundImage: "url(assets/img/bg/footer-bg1-1.png)", backgroundSize: 'cover', backgroundAttachment: 'fixed' }}
     >
       <div className="container">
         <div className="widget-area">
