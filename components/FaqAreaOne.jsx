@@ -1,14 +1,20 @@
 "use client"
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import dynamic from 'next/dynamic';
+
+// Bootstrap'i sadece client-side'da yükle
+const BootstrapJS = dynamic(() => import('bootstrap/dist/js/bootstrap.bundle.min.js'), {
+  ssr: false
+});
 
 const FaqAreaOne = () => {
   const [faqs, setFaqs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const fetchFaqs = async () => {
       try {
         const response = await fetch('https://api.iberauto.az/api/faqs?populate=*');
@@ -29,6 +35,10 @@ const FaqAreaOne = () => {
 
   if (loading) {
     return <div className="text-center py-5">Yüklənir...</div>;
+  }
+
+  if (!mounted) {
+    return null;
   }
 
   return (

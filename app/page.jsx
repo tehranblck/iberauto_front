@@ -2,7 +2,6 @@ import AboutOne from "../components/AboutOne";
 import CTAAreaOne from "../components/CTAAreaOne";
 import CounterOne from "../components/CounterOne";
 import FaqAreaOne from "../components/FaqAreaOne";
-import FooterAreaOne from "../components/FooterAreaOne";
 import HeaderOne from "../components/HeaderOne";
 import HeroOne from "../components/HeroOne";
 import ServiceAreaOne from "../components/ServiceAreaOne";
