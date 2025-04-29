@@ -19,7 +19,7 @@ const page = () => {
       <Preloader />
 
       {/* Header one */}
-      <HeaderOne />
+
 
       {/* Breadcrumb */}
       <Breadcrumb title={"Əlaqə"} />

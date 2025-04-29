@@ -25,7 +25,7 @@ const page = () => {
       <Animation />
 
       {/* Header one */}
-      <HeaderOne />
+
 
       {/* Hero One */}
       <HeroOne />

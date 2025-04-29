@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"; import Link from "next/link";
 
 
 const HeroOne = () => {
@@ -9,9 +8,9 @@ const HeroOne = () => {
       id="hero"
       style={{ backgroundImage: "url(assets/img/hero/hero.png)", backgroundSize: 'cover', backgroundAttachment: 'fixed' }}
     >
-      <div className="container">
+      <div style={{ width: '100%', display: "flex", justifyContent: "center" }} className="container">
         <div style={{ width: '100%' }} className="row ">
-          <div style={{ alignSelf: 'flex-start', margin: '70px 0px' }} className="col-xl-12 ">
+          <div style={{ margin: '40px 0px' }} className="col-xl-12 ">
             <div className="hero-style1">
               <span className="sub-title text-white">Ən etibarlı avtomobil Hissələri</span>
               <h1 className="hero-title text-white">
