@@ -1,20 +1,13 @@
 "use client"
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import dynamic from 'next/dynamic';
-
-// Bootstrap'i sadece client-side'da yükle
-const BootstrapJS = dynamic(() => import('bootstrap/dist/js/bootstrap.bundle.min.js'), {
-  ssr: false
-});
 
 const FaqAreaOne = () => {
   const [faqs, setFaqs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [mounted, setMounted] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    setMounted(true);
     const fetchFaqs = async () => {
       try {
         const response = await fetch('https://api.iberauto.az/api/faqs?populate=*');
@@ -33,12 +26,12 @@ const FaqAreaOne = () => {
     fetchFaqs();
   }, []);
 
+  const toggleAccordion = (index) => {
+    setActiveIndex(index === activeIndex ? -1 : index);
+  };
+
   if (loading) {
     return <div className="text-center py-5">Yüklənir...</div>;
-  }
-
-  if (!mounted) {
-    return null;
   }
 
   return (
@@ -62,32 +55,22 @@ const FaqAreaOne = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="accordion" id="faqAccordion">
+            <div className="custom-accordion">
               {faqs.map((faq, index) => (
                 <div key={faq.id} className="accordion-item">
-                  <h2 className="accordion-header" id={`heading-${faq.id}`}>
-                    <button
-                      className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#collapse-${faq.id}`}
-                      aria-expanded={index === 0 ? "true" : "false"}
-                      aria-controls={`collapse-${faq.id}`}
-                    >
-                      {faq.sual}
-                    </button>
-                  </h2>
                   <div
-                    id={`collapse-${faq.id}`}
-                    className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-                    aria-labelledby={`heading-${faq.id}`}
-                    data-bs-parent="#faqAccordion"
+                    className={`accordion-header ${activeIndex === index ? 'active' : ''}`}
+                    onClick={() => toggleAccordion(index)}
                   >
-                    <div className="accordion-body">
-                      <p className="faq-text">
-                        {faq.cavab}
-                      </p>
-                    </div>
+                    <h3>{faq.sual}</h3>
+                    <span className="accordion-icon">
+                      <i className={`fas fa-chevron-${activeIndex === index ? 'up' : 'down'}`} />
+                    </span>
+                  </div>
+                  <div
+                    className={`accordion-content ${activeIndex === index ? 'active' : ''}`}
+                  >
+                    <p>{faq.cavab}</p>
                   </div>
                 </div>
               ))}
@@ -95,6 +78,60 @@ const FaqAreaOne = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .custom-accordion {
+          width: 100%;
+        }
+        .accordion-item {
+          margin-bottom: 15px;
+          border: 1px solid #e0e0e0;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .accordion-header {
+          padding: 15px 20px;
+          background-color: #f8f9fa;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+        .accordion-header h3 {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 600;
+          color: #333;
+        }
+        .accordion-header.active {
+          background-color: var(--theme-color);
+        }
+        .accordion-header.active h3 {
+          color: white;
+        }
+        .accordion-icon {
+          color: #666;
+          transition: transform 0.3s ease;
+        }
+        .accordion-header.active .accordion-icon {
+          color: white;
+        }
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+          background-color: white;
+        }
+        .accordion-content.active {
+          max-height: 500px;
+        }
+        .accordion-content p {
+          padding: 20px;
+          margin: 0;
+          color: #666;
+          line-height: 1.6;
+        }
+      `}</style>
     </section>
   );
 };
