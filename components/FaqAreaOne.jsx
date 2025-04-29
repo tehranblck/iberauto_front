@@ -1,6 +1,8 @@
 "use client"
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const FaqAreaOne = () => {
   const [faqs, setFaqs] = useState([]);
@@ -30,7 +32,7 @@ const FaqAreaOne = () => {
   }
 
   return (
-    <section style={{ marginTop: "120px" }} className="faq-area-1 space-bottom">
+    <section className="space-top space-extra-bottom">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -50,10 +52,10 @@ const FaqAreaOne = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="accordion-area accordion" id="faqAccordion">
+            <div className="accordion" id="faqAccordion">
               {faqs.map((faq, index) => (
-                <div key={faq.id} className={`accordion-card ${index === 0 ? 'active' : ''}`}>
-                  <div className="accordion-header" id={`collapse-item-${faq.id}`}>
+                <div key={faq.id} className="accordion-item">
+                  <h2 className="accordion-header" id={`heading-${faq.id}`}>
                     <button
                       className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
                       type="button"
@@ -64,11 +66,11 @@ const FaqAreaOne = () => {
                     >
                       {faq.sual}
                     </button>
-                  </div>
+                  </h2>
                   <div
                     id={`collapse-${faq.id}`}
                     className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-                    aria-labelledby={`collapse-item-${faq.id}`}
+                    aria-labelledby={`heading-${faq.id}`}
                     data-bs-parent="#faqAccordion"
                   >
                     <div className="accordion-body">

@@ -10,8 +10,8 @@ const HeroOne = () => {
       style={{ backgroundImage: "url(assets/img/hero/hero.png)", backgroundSize: 'cover', backgroundAttachment: 'fixed' }}
     >
       <div className="container">
-        <div className="row flex-row-reverse">
-          <div style={{ alignSelf: 'flex-start', marginBottom: '10px' }} className="col-xl-6 ">
+        <div style={{ width: '100%' }} className="row ">
+          <div style={{ alignSelf: 'flex-start', margin: '70px 0px' }} className="col-xl-12 ">
             <div className="hero-style1">
               <span className="sub-title text-white">Ən etibarlı avtomobil Hissələri</span>
               <h1 className="hero-title text-white">
@@ -33,11 +33,7 @@ const HeroOne = () => {
               </div>
             </div>
           </div>
-          <div style={{ alignSelf: 'flex-end' }} className="col-xl-6">
-            <div className="hero-thumb bottom-0 text-center">
-              <Image src="/assets/img/hero/hero_thumb_1_1.png" alt="IberAuto" width={500} height={500} />
-            </div>
-          </div>
+
         </div>
       </div>
     </div>

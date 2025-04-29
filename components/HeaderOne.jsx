@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { headerLinks } from "../utils/navLinks";
+import Image from "next/image";
 
 const HeaderOne = () => {
   const [active, setActive] = useState(false);
@@ -59,19 +60,19 @@ const HeaderOne = () => {
                 <div className="header-links">
                   <ul>
                     <li>
-                      <i className="fas fa-envelope" />
+                      <i style={{ color: 'white' }} className="fas fa-envelope" />
                       <Link href="mailto:info@iberauto.az">
                         info@iberauto.az
                       </Link>
                     </li>
                     <li>
-                      <i className="fas fa-map-marker-alt" />
+                      <i style={{ color: 'white' }} className="fas fa-map-marker-alt" />
                       <Link target="_blank" href="https://maps.app.goo.gl/dEhz9K8yBK7SebQ2A">
                         Bakı şəhəri, Qaradağ rayonu
                       </Link>
                     </li>
                     <li>
-                      <i className="fas fa-clock" />
+                      <i style={{ color: 'white' }} className="fas fa-clock" />
                       7/24
                     </li>
                   </ul>
@@ -105,8 +106,8 @@ const HeaderOne = () => {
         <div className={`sticky-wrapper ${scroll && "sticky"}`}>
           <div className="menu-area">
             <div className="header-navbar-logo">
-              <Link href="/">
-
+              <Link className="d-flex align-items-center" href="/">
+                <Image src="/assets/img/icon/logo.png" alt="IberAuto" width={200} height={200} />
               </Link>
             </div>
             <div className="container">
@@ -161,7 +162,7 @@ const HeaderOne = () => {
               <Link href="/">
                 <img src="assets/img/logo.svg" alt="IberAuto" />
               </Link>
-              <button className="menu-toggle" onClick={mobileMenu}>
+              logo-bg         <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />
               </button>
             </div>
