@@ -106,7 +106,7 @@ const FooterAreaOne = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col-lg-6">
               <p className="copyright-text">
-                Copyright © {new Date().getFullYear()} <Link href="/">IberAuto</Link>. Bütün hüquqlar qorunur.
+                Copyright © {new Date().getFullYear()} <Link href="/">IberAuto</Link>. Bütün hüquqlar qorunur. | Designed by <Link href="https://saytpro.com" target="_blank" rel="noopener noreferrer">Sayt Pro</Link>
               </p>
             </div>
             <div className="col-lg-6 text-end d-none d-lg-block">
