@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { footerCompanyLinks, footerProductLinks, footerBottomLinks } from "../utils/navLinks";
+import Image from "next/image";
 
 const FooterAreaOne = () => {
   return (
@@ -10,89 +11,81 @@ const FooterAreaOne = () => {
     >
       <div className="container">
         <div className="widget-area">
-          <div className="row justify-content-between">
-            <div className="col-md-6 col-lg-3">
+          <div className="row justify-content-between g-4">
+            <div className="col-12 col-md-6 col-lg-3">
               <div className="widget footer-widget">
                 <div className="widget-about">
-                  <div className="footer-logo">
+                  <div className="footer-logo mb-3">
                     <Link href="/">
-                      <img src="assets/img/logo-white.svg" alt="IberAuto" />
+                      <Image
+                        src="assets/img/logo.svg"
+                        alt="IberAuto"
+                        width={150}
+                        height={150}
+                        className="img-fluid"
+                      />
                     </Link>
                   </div>
-                  <p className="about-text">
+                  <p className="about-text mb-4">
                     Orijinal və keyfiyyətli avtomobil Hissələri satışında etibarlı tərəfdaşınız.
                   </p>
-                  <div className="social-links">
-                    <Link href="https://www.facebook.com/">
+                  <div className="social-links d-flex gap-3">
+                    <Link href="https://www.facebook.com/" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </Link>
-                    <Link href="https://www.instagram.com/">
+                    <Link href="https://www.instagram.com/" className="social-link">
                       <i className="fab fa-instagram" />
                     </Link>
-                    <Link href="https://www.twitter.com/">
+                    <Link href="https://www.twitter.com/" className="social-link">
                       <i className="fab fa-twitter" />
                     </Link>
-                    <Link href="https://www.linkedin.com/">
+                    <Link href="https://www.linkedin.com/" className="social-link">
                       <i className="fab fa-linkedin" />
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-2">
+            <div className="col-12 col-md-6 col-lg-2">
               <div className="widget widget_nav_menu footer-widget">
-                <h3 className="widget-title">Şirkət</h3>
+                <h3 style={{ color: 'white' }} className="widget-title mb-3">Linklər</h3>
                 <div className="menu-all-pages-container">
-                  <ul className="menu">
+                  <ul className="menu list-unstyled">
                     {footerCompanyLinks.map((link, index) => (
-                      <li key={index}>
-                        <Link href={link.path}>{link.title}</Link>
+                      <li key={index} className="mb-2">
+                        <Link href={link.path} className="text-decoration-none">{link.title}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
-              <div className="widget widget_nav_menu footer-widget">
-                <h3 className="widget-title">Məhsul Kateqoriyaları</h3>
-                <div className="menu-all-pages-container">
-                  <ul className="menu">
-                    {footerProductLinks.map((link, index) => (
-                      <li key={index}>
-                        <Link href={link.path}>{link.title}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3">
               <div className="widget footer-widget">
-                <h3 className="widget-title">Əlaqə</h3>
+                <h3 style={{ color: 'white' }} className="widget-title mb-3">Əlaqə</h3>
                 <div className="widget-contact">
-                  <div className="info-box">
+                  <div className="info-box mb-3">
                     <div className="info-box_icon">
                       <i className="fas fa-location-dot" />
                     </div>
-                    <p className="info-box_text">
+                    <p className="info-box_text mb-0">
                       Bakı şəhəri, Azərbaycan
                     </p>
                   </div>
-                  <div className="info-box">
+                  <div className="info-box mb-3">
                     <div className="info-box_icon">
                       <i className="fas fa-phone" />
                     </div>
-                    <p className="info-box_text">
-                      <Link href="tel:+994551004038">+994 55 100 40 38</Link>
+                    <p className="info-box_text mb-0">
+                      <Link href="tel:+994551004038" className="text-decoration-none">+994 55 100 40 38</Link>
                     </p>
                   </div>
                   <div className="info-box">
                     <div className="info-box_icon">
                       <i className="fas fa-envelope" />
                     </div>
-                    <p className="info-box_text">
-                      <Link href="mailto:info@iberauto.az">info@iberauto.az</Link>
+                    <p className="info-box_text mb-0">
+                      <Link href="mailto:info@iberauto.az" className="text-decoration-none">info@iberauto.az</Link>
                     </p>
                   </div>
                 </div>
@@ -101,24 +94,13 @@ const FooterAreaOne = () => {
           </div>
         </div>
       </div>
-      <div className="copyright-wrap">
+      <div className="copyright-wrap py-3">
         <div className="container">
-          <div className="row justify-content-between align-items-center">
-            <div className="col-lg-6">
-              <p className="copyright-text">
-                Copyright © {new Date().getFullYear()} <Link href="/">IberAuto</Link>. Bütün hüquqlar qorunur. | Designed by <Link href="https://saytpro.com" target="_blank" rel="noopener noreferrer">Sayt Pro</Link>
+          <div className="row justify-content-center text-center">
+            <div className="col-12">
+              <p className="copyright-text mb-0">
+                Copyright © {new Date().getFullYear()} <Link href="/" className="text-decoration-none">IberAuto</Link>. Bütün hüquqlar qorunur. | Designed by <Link href="https://saytpro.com" target="_blank" rel="noopener noreferrer" className="text-decoration-none">Sayt Pro</Link>
               </p>
-            </div>
-            <div className="col-lg-6 text-end d-none d-lg-block">
-              <div className="footer-links">
-                <ul>
-                  {footerBottomLinks.map((link, index) => (
-                    <li key={index}>
-                      <Link href={link.path}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>

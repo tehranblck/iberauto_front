@@ -105,19 +105,18 @@ const HeaderOne = () => {
         </div>
         <div className={`sticky-wrapper ${scroll && "sticky"}`}>
           <div className="menu-area">
-            <div className="header-navbar-logo">
-              <Link className="d-flex align-items-center" href="/">
-                <Image src="/assets/img/icon/logo.png" alt="IberAuto" width={200} height={200} />
-              </Link>
-            </div>
             <div className="container">
               <div className="row align-items-center justify-content-lg-start justify-content-between">
-                <div className="col-auto d-xl-none d-block">
-                  <div className="header-logo">
-                    <Link href="/">
-                      <img src="assets/img/logo-white.svg" alt="IberAuto" />
-                    </Link>
-                  </div>
+                <div className="col-auto">
+                  <Link href="/">
+                    <Image style={{ zIndex: 99999999, padding: '10px' }}
+                      src="/assets/img/logo.svg"
+                      alt="IberAuto"
+                      width={150}
+                      height={150}
+                      className="img-fluid"
+                    />
+                  </Link>
                 </div>
                 <div className="col-auto">
                   <nav className="main-menu d-none d-lg-inline-block">
@@ -152,7 +151,6 @@ const HeaderOne = () => {
                 </div>
               </div>
             </div>
-            <div className="logo-bg" />
           </div>
         </div>
 
@@ -160,9 +158,15 @@ const HeaderOne = () => {
           <div className="mobile-menu-area">
             <div className="mobile-logo">
               <Link href="/">
-                <img src="assets/img/logo.svg" alt="IberAuto" />
+                <Image
+                  src="/assets/img/logo.svg"
+                  alt="IberAuto"
+                  width={150}
+                  height={150}
+                  className="img-fluid"
+                />
               </Link>
-              logo-bg         <button className="menu-toggle" onClick={mobileMenu}>
+              <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />
               </button>
             </div>

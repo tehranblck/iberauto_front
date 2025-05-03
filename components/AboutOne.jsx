@@ -40,7 +40,7 @@ const AboutOne = () => {
             <div className="about-content-wrap">
               <div className="title-area">
                 <span className="sub-title">Haqqımızda</span>
-                <h2 className="sec-title">
+                <h2 style={{ color: 'black!important' }} className="sec-title">
                   Avtomobil Hissələri Satışında Etibarlı Tərəfdaş
                 </h2>
                 <p className="sec-text">

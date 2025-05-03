@@ -166,11 +166,8 @@ const ProductDetailsPage = ({ params }) => {
                 }
             `}</style>
 
-            {/* Subscribe One */}
-            <SubscribeOne />
 
-            {/* Footer Area One */}
-            <FooterAreaOne />
+
         </>
     );
 };

@@ -21,8 +21,6 @@ const page = () => {
       {/* Shop Area */}
       <ShopArea />
 
-      {/* Subscribe One */}
-      <SubscribeOne />
     </>
   );
 };

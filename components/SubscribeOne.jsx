@@ -9,11 +9,7 @@ const SubscribeOne = () => {
         className="footer-top-1 bg-theme"
         style={{ backgroundImage: "url(/assets/img/bg/footer-top-bg1-1.png)" }}
       >
-        <div className="footer-logo">
-          <Link href="/">
-            <Image width={100} height={100} src="/assets/img/logo-white.svg" alt="İberAuto" />
-          </Link>
-        </div>
+
         <div className="call-media-wrap">
           <div className="icon">
             <img src="/assets/img/icon/phone-1.svg" alt="İberAuto" />

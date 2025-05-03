@@ -27,9 +27,6 @@ const page = () => {
       {/* Contact Area */}
       <ContactArea />
 
-      {/* Subscribe One */}
-      <SubscribeOne />
-
       {/* Footer Area One */}
       <FooterAreaOne />
     </>

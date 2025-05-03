@@ -25,8 +25,7 @@ const page = () => {
       {/* Testimonial One */}
       <TestimonialOne />
 
-      {/* Subscribe One */}
-      <SubscribeOne />
+
     </>
   );
 };

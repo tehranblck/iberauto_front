@@ -148,7 +148,7 @@ const CounterOne = () => {
                 </div>
                 <div className="call-media-wrap">
                   <div className="icon">
-                    <Image src="/assets/img/icon/phone-1.svg" alt="IberAuto" width={50} height={50} />
+                    <Image src="/assets/img/logo.svg" alt="IberAuto" width={50} height={50} />
                   </div>
                   <div className="media-body">
                     <h6 className="title text-white">Zəng Üçün Müraciət:</h6>
