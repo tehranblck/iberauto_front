@@ -174,7 +174,7 @@ const HeaderOne = () => {
               <ul id="offcanvas-navigation">
                 {headerLinks.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.path}>{link.title}</Link>
+                    <Link href={link.path} onClick={() => setActive(false)}>{link.title}</Link>
                   </li>
                 ))}
               </ul>
