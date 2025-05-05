@@ -34,7 +34,8 @@ const ShopArea = () => {
       .replace(/[Ş]/g, 's')
       .replace(/[Ç]/g, 'c')
       .replace(/[Ö]/g, 'o')
-      .replace(/[Ə]/g, 'e');
+      .replace(/[Ə]/g, 'e')
+      .replace(/\s+/g, '');
   };
 
   useEffect(() => {
@@ -46,6 +47,7 @@ const ShopArea = () => {
         }
         const data = await response.json();
         console.log('API Response:', data); // Debug için
+        console.log('First Product Full Structure:', data.data[0]); // İlk ürünün tam yapısını görelim
         if (!data.data) {
           throw new Error('API veri formatı hatalı');
         }
@@ -101,19 +103,39 @@ const ShopArea = () => {
     }
 
     const normalizedSearchTerm = normalizeText(searchTerm);
-    const productBrand = normalizeText(product.marka_adi);
-    const productModel = normalizeText(product.model);
-    const productCode = normalizeText(product.kod);
-    const productName = normalizeText(product.mehsul_adi);
+    console.log('Normalized Search Term:', normalizedSearchTerm);
+
+    const productBrand = normalizeText(product.marka_adi || '');
+    const productModel = normalizeText(product.model || '');
+    const productCode = normalizeText(product.kod || '');
+    const productName = normalizeText(product.mehsul_adi || '');
+    const productOEM = normalizeText(product.oem || '');
+
+    console.log('Product Data:', {
+      brand: productBrand,
+      model: productModel,
+      code: productCode,
+      name: productName,
+      oem: productOEM
+    });
 
     const matchesSearch =
       productBrand.includes(normalizedSearchTerm) ||
       productModel.includes(normalizedSearchTerm) ||
       productCode.includes(normalizedSearchTerm) ||
-      productName.includes(normalizedSearchTerm);
+      productName.includes(normalizedSearchTerm) ||
+      productOEM.includes(normalizedSearchTerm);
 
-    return matchesCarBrand && matchesCarModel && matchesSearch;
+    const result = matchesCarBrand && matchesCarModel && matchesSearch;
+    if (result) {
+      console.log('Matched Product:', product);
+    }
+    return result;
   });
+
+  // Debug için filtrelenmiş ürünleri kontrol et
+  console.log('Filtered Products Count:', filteredProducts.length);
+  console.log('Filtered Products:', filteredProducts);
 
   // Sıralama işlemi
   const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -127,14 +149,27 @@ const ShopArea = () => {
     }
   });
 
+  // Filtreleme veya sıralama değiştiğinde sayfayı sıfırla
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCarBrand, selectedCarModel, searchTerm, sortOrder]);
+
+  // Debug için filtrelenmiş ürünleri kontrol et
+  useEffect(() => {
+    console.log('Filtered Products Count:', filteredProducts.length);
+    console.log('Current Page:', currentPage);
+    console.log('Current Products:', sortedProducts.slice(currentPage * productsPerPage - productsPerPage, currentPage * productsPerPage));
+  }, [filteredProducts, currentPage, sortedProducts]);
+
   // Sayfalama için gerekli hesaplamalar
-  const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   // Sayfa değiştirme fonksiyonu
   const handlePageChange = (pageNumber) => {
+    if (pageNumber < 1 || pageNumber > totalPages) return;
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -169,11 +204,6 @@ const ShopArea = () => {
 
     return pageNumbers;
   };
-
-  // Filtreleme veya sıralama değiştiğinde sayfayı sıfırla
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [selectedCarBrand, selectedCarModel, searchTerm, sortOrder]);
 
   // Benzersiz araba markalarını al
   const uniqueCarBrands = Array.from(new Set(products.map(p => p.marka_adi)));
@@ -217,7 +247,7 @@ const ShopArea = () => {
                     </button>
                   </form>
                   <div className="search-info">
-                    <small>Marka, Model, Kod və ya Məhsul adı üzrə axtarış edə bilərsiniz</small>
+                    <small>Marka, Model, Kod, OEM kodu və ya Məhsul adı üzrə axtarış edə bilərsiniz</small>
                   </div>
                 </div>
                 <div className="widget widget_categories mt-4">
@@ -259,7 +289,7 @@ const ShopArea = () => {
               <div className="row justify-content-between align-items-center">
                 <div className="col-md-6 col-12 mb-3 mb-md-0">
                   <p className="woocommerce-result-count mb-0">
-                    {sortedProducts.length}+ nəticədən 1–{sortedProducts.length - 1} göstərilir
+                    {filteredProducts.length} nəticədən {indexOfFirstProduct + 1}–{Math.min(indexOfLastProduct, filteredProducts.length)} göstərilir
                   </p>
                 </div>
                 <div className="col-md-6 col-12">
@@ -296,20 +326,26 @@ const ShopArea = () => {
               </div>
             </div>
             <div className="row gy-4">
-              {currentProducts.map((product) => (
-                <div key={product.id} className="col-xl-4 col-md-6 col-12">
-                  <ProductCard
-                    slug={product.slug}
-                    id={product.id}
-                    title={product.mehsul_adi}
-                    price={product.qiymet}
-                    image={`https://api.iberauto.az${product.foto.url}`}
-                    brand={product.marka_adi}
-                    model={product.model}
-                    code={product.kod}
-                  />
+              {currentProducts.length > 0 ? (
+                currentProducts.map((product) => (
+                  <div key={product.id} className="col-xl-4 col-md-6 col-12">
+                    <ProductCard
+                      slug={product.slug}
+                      id={product.id}
+                      title={product.mehsul_adi}
+                      price={product.qiymet}
+                      image={`https://api.iberauto.az${product.foto.url}`}
+                      brand={product.marka_adi}
+                      model={product.model}
+                      code={product.kod}
+                    />
+                  </div>
+                ))
+              ) : (
+                <div className="col-12 text-center">
+                  <p>Heç bir məhsul tapılmadı</p>
                 </div>
-              ))}
+              )}
             </div>
             {totalPages > 1 && (
               <div className="pagination justify-content-center mt-70">
@@ -385,7 +421,7 @@ const ShopArea = () => {
                   </button>
                 </form>
                 <div className="search-info">
-                  <small>Marka, Model, Kod və ya Məhsul adı üzrə axtarış edə bilərsiniz</small>
+                  <small>Marka, Model, Kod, OEM kodu və ya Məhsul adı üzrə axtarış edə bilərsiniz</small>
                 </div>
               </div>
               <div className="widget widget_categories">

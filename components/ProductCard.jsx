@@ -14,7 +14,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
 
     return (
         <div className="product-card style2">
-            <div className="product-img">
+            <Link href={`/shop/${slug}`} className="product-img">
                 <Image
                     src={image}
                     alt={title}
@@ -22,7 +22,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
                     height={300}
                     priority
                 />
-            </div>
+            </Link>
             <div className="product-content">
                 <h3 className="product-title">
                     <Link href={`/shop/${slug}`}>{title}</Link>
