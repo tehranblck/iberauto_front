@@ -25,7 +25,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
             </Link>
             <div className="product-content">
                 <h3 className="product-title">
-                    <Link href={`/shop/${slug}`}>{title}</Link>
+                    <Link style={{ fontSize: "28px" }} href={`/shop/${slug}`}>{title}</Link>
                 </h3>
                 <div className="product-meta">
                     <div className="meta-item">
