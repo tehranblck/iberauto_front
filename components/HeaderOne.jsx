@@ -67,8 +67,8 @@ const HeaderOne = () => {
                     </li>
                     <li>
                       <i style={{ color: 'white' }} className="fas fa-map-marker-alt" />
-                      <Link target="_blank" href="https://maps.app.goo.gl/dEhz9K8yBK7SebQ2A">
-                        Bakı şəhəri, Qaradağ rayonu
+                      <Link target="_blank" href="https://maps.app.goo.gl/DgBfFota7vDS8HUh7">
+                        Bakı şəhəri, Qaradağ ray, xarici dairəvi ev 30, m. 9K
                       </Link>
                     </li>
                     <li>

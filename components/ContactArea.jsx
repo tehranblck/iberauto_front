@@ -13,9 +13,8 @@ const ContactArea = () => {
                 </div>
                 <h6 className="contact-info_title">Ünvan</h6>
                 <p className="contact-info_text">
-                  Baku,Azerbaijan
+                  Bakı şəhəri, Qaradağ ray, xarici dairəvi ev 30
                 </p>
-                <p className="contact-info_text">Bakı,Azərbaycan</p>
               </div>
             </div>
             <div className="col-xxl-3 col-lg-4 col-md-6">
@@ -25,11 +24,9 @@ const ContactArea = () => {
                 </div>
                 <h6 className="contact-info_title">Telefon Nömrəsi</h6>
                 <p className="contact-info_text">
-                  <a href="tel:6295550129">(994) 55 555-55-55</a>
+                  <a href="tel:+994551004038">+994 55 100 40 38</a>
                 </p>
-                <p className="contact-info_text">
-                  <a href="tel:01254693326">01254693326</a>
-                </p>
+
               </div>
             </div>
             <div className="col-xxl-3 col-lg-4 col-md-6">
@@ -50,11 +47,8 @@ const ContactArea = () => {
                 <h6 className="contact-info_title">E-poçt</h6>
                 <p className="contact-info_text">
                   <a href="mailto:info@saytyarat.com">
-                    info@saytyarat.com
+                    info@iberauto.az
                   </a>
-                </p>
-                <p className="contact-info_text">
-                  <a href="mailto:info@saytyarat.com">info@saytyarat.com</a>
                 </p>
               </div>
             </div>
@@ -65,9 +59,13 @@ const ContactArea = () => {
         <div className="container">
           <div className="map-sec">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2s!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.1556925252335!2d49.79915828227391!3d40.44969089777967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030861fe3c4b257%3A0xd6c70bd97bcee746!2zRGFpcsmZdmksIEJha8Sx!5e0!3m2!1str!2saz!4v1746458374467!5m2!1str!2saz"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title="address"
             />
           </div>
