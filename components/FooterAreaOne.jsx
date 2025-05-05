@@ -33,7 +33,7 @@ const FooterAreaOne = () => {
                     <Link target="_blank" href="https://www.facebook.com/profile.php?id=61576043817629" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </Link>
-                    <Link target="_blank" href="https://www.instagram.com/iberauto_az" className="social-link">
+                    <Link target="_blank" href="https://www.instagram.com/iberauto__az" className="social-link">
                       <i className="fab fa-instagram" />
                     </Link>
                     <Link target="_blank" href="https://www.instagram.com/iberauto_az/" className="social-link">
