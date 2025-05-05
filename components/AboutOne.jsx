@@ -32,7 +32,7 @@ const AboutOne = () => {
                 <Image style={{ border: "2px solid lightgray", scale: 0.9 }} src="/assets/img/normal/about_1-1.png" alt="IberAuto" width={500} height={500} />
               </div>
               <div className="about-img-2">
-                <Image src="/assets/img/normal/about_1-2.png" alt="IberAuto" width={500} height={500} />
+                <Image style={{ border: "2px solid lightgray", scale: 0.9 }} src="/assets/img/normal/about_1-2.png" alt="IberAuto" width={500} height={500} />
               </div>
             </div>
           </div>
