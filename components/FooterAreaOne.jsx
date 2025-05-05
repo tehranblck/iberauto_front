@@ -30,18 +30,16 @@ const FooterAreaOne = () => {
                     Orijinal və keyfiyyətli avtomobil Hissələri satışında etibarlı tərəfdaşınız.
                   </p>
                   <div className="social-links d-flex gap-3">
-                    <Link href="https://www.facebook.com/" className="social-link">
+                    <Link target="_blank" href="https://www.facebook.com/profile.php?id=61576043817629" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </Link>
-                    <Link href="https://www.instagram.com/" className="social-link">
+                    <Link target="_blank" href="https://www.instagram.com/iberauto_az" className="social-link">
                       <i className="fab fa-instagram" />
                     </Link>
-                    <Link href="https://www.twitter.com/" className="social-link">
-                      <i className="fab fa-twitter" />
+                    <Link target="_blank" href="https://www.instagram.com/iberauto_az/" className="social-link">
+                      <i className="fab fa-whatsapp" />
                     </Link>
-                    <Link href="https://www.linkedin.com/" className="social-link">
-                      <i className="fab fa-linkedin" />
-                    </Link>
+
                   </div>
                 </div>
               </div>
