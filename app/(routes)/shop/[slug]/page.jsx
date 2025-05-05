@@ -126,7 +126,7 @@ const ProductDetailsPage = ({ params }) => {
                                 </table>
                             </div>
                             <div className="product-actions mt-4">
-                                <Link href="/contact" className="btn btn-danger">
+                                <Link href="https://wa.me/994551004038" className="btn btn-danger">
                                     <i className="fas fa-shopping-cart me-2"></i>
                                     Sifariş et
                                 </Link>
