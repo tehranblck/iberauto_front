@@ -8,7 +8,7 @@ import ServiceAreaOne from "../components/ServiceAreaOne";
 import TestimonialOne from "../components/TestimonialOne";
 import Animation from "../helper/Animation";
 import Preloader from "../helper/Preloader";
-
+import ShopArea from "../components/ShopArea";
 export const metadata = {
   title: "Ana Səhifə || IberAuto - Avtomobil Hissələri Satışı",
   description:
@@ -29,6 +29,7 @@ const page = () => {
 
       {/* Hero One */}
       <HeroOne />
+      <ShopArea />
 
       {/* Counter One */}
       <CounterOne />
