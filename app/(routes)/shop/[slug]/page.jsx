@@ -76,7 +76,7 @@ const ProductDetailsPage = ({ params }) => {
             {/* Shop Details */}
             <div style={{ marginTop: '2rem' }} className="container">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-5">
                         <div className="product-image mb-4">
                             <Image
                                 src={
@@ -96,7 +96,7 @@ const ProductDetailsPage = ({ params }) => {
                     </div>
                     <div className="col-lg-6">
                         <div className="product-details">
-                            <h2 className="product-title mb-4">{product?.mehsul_adi}</h2>
+                            <h2 style={{ color: 'red' }} className="product-title mb-4">{product?.mehsul_adi}</h2>
                             <div className="table-responsive">
                                 <table className="table table-bordered">
                                     <tbody>
@@ -112,6 +112,10 @@ const ProductDetailsPage = ({ params }) => {
                                             <th className="bg-light">Kod</th>
                                             <td>{product?.kod}</td>
                                         </tr>
+                                        <tr>
+                                            <th className="bg-light">Brend</th>
+                                            <td className=" fw-bold">{product?.brand} </td>
+                                        </tr>
                                         {product?.oem && (
                                             <tr>
                                                 <th className="bg-light">OEM</th>
@@ -120,12 +124,17 @@ const ProductDetailsPage = ({ params }) => {
                                         )}
                                         <tr>
                                             <th className="bg-light">Qiymət</th>
-                                            <td className="text-danger fw-bold">{product?.qiymet} ₼</td>
+                                            <td className=" fw-bold">{product?.qiymet} ₼</td>
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div className="mt-4">Məhsul haqqında</div>
+
+                                <p className="mt-4">
+                                    {product?.haqqinda}
+                                </p>
                             </div>
-                            <div className="product-actions mt-4">
+                            <div className="product-actions my-4">
                                 <Link href="https://wa.me/994551004038" className="btn btn-danger">
                                     <i className="fas fa-shopping-cart me-2"></i>
                                     Sifariş et
