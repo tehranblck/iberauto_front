@@ -52,7 +52,7 @@ const HeaderOne = () => {
 
   return (
     <>
-      <header className="nav-header header-layout1">
+      <header style={{ backgroundColor: '#121212' }} className="nav-header header-layout1">
         <div className="header-top">
           <div className="container">
             <div className="row justify-content-center justify-content-lg-between align-items-center gy-2">

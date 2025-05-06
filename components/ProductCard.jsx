@@ -25,7 +25,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
             </Link>
             <div className="product-content">
                 <h3 className="product-title">
-                    <Link style={{ fontSize: "28px" }} href={`/shop/${slug}`}>{title}</Link>
+                    <Link style={{ fontSize: "28px", color: "red" }} href={`/shop/${slug}`}>{title}</Link>
                 </h3>
                 <div className="product-meta">
                     <div className="meta-item">
@@ -47,7 +47,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
                 </div>
 
                 <div className="product-footer">
-                    <span className="price">
+                    <span style={{ color: "red" }} className="price">
                         {price} AZN
                     </span>
                     <Link href={whatsappUrl} className="link-btn" target="_blank" rel="noopener noreferrer">

@@ -68,13 +68,10 @@ const ProductDetailsPage = ({ params }) => {
             <HeaderOne />
 
             {/* Breadcrumb */}
-            <Breadcrumb
-                title={product?.mehsul_adi}
-                subtitle={`${product?.marka_adi} ${product?.model}`}
-            />
+
 
             {/* Shop Details */}
-            <div style={{ marginTop: '2rem' }} className="container">
+            <div style={{ marginTop: '10rem' }} className="container">
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="product-image mb-4">
