@@ -11,17 +11,19 @@ export const metadata = {
 
 const page = () => {
   return (
-    <>
+    <div>
       {/* Preloader */}
       <Preloader />
 
+
       {/* Breadcrumb */}
-      <Breadcrumb title={"Mağaza"} />
 
-      {/* Shop Area */}
-      <ShopArea />
 
-    </>
+      <div style={{ marginTop: "50px" }}>
+        <ShopArea />
+      </div>
+
+    </div>
   );
 };
 
