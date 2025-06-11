@@ -30,7 +30,7 @@ const page = () => {
       {/* Hero One */}
       <HeroOne />
       <div style={{ marginBottom: '30px' }}>
-        <ShopArea />
+        <ShopArea size={"small"} />
       </div>
 
       {/* Counter One */}

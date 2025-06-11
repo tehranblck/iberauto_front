@@ -3,29 +3,29 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
+const ProductCard = ({ id, title, price, image, brand, model, code, slug, size = "large" }) => {
     if (!id || !title || !price || !image || !brand || !slug) {
         return null;
     }
-    console.log(image)
 
     const whatsappMessage = `Salam mən ${title} məhsulu almaq istəyirəm`;
     const whatsappUrl = `https://wa.me/994551004038?text=${encodeURIComponent(whatsappMessage)}`;
 
     return (
-        <div className="product-card style2">
-            <Link href={`/shop/${slug}`} className="product-img">
+        <div className={`product-card style2 ${size === "small" ? "small" : ""}`}>
+            <Link href={`/shop/${slug}`} className="product-image-link">
                 <Image
                     src={image}
                     alt={title}
-                    width={300}
-                    height={300}
+                    width={size === "small" ? 150 : 300}
+                    height={size === "small" ? 150 : 300}
                     priority
+                    className="product-image"
                 />
             </Link>
             <div className="product-content">
                 <h3 className="product-title">
-                    <Link style={{ fontSize: "28px", color: "red" }} href={`/shop/${slug}`}>{title}</Link>
+                    <Link href={`/shop/${slug}`}>{title}</Link>
                 </h3>
                 <div className="product-meta">
                     <div className="meta-item">
@@ -47,7 +47,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
                 </div>
 
                 <div className="product-footer">
-                    <span style={{ color: "red" }} className="price">
+                    <span className="price">
                         {price} AZN
                     </span>
                     <Link href={whatsappUrl} className="link-btn" target="_blank" rel="noopener noreferrer">
@@ -56,51 +56,100 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug }) => {
                 </div>
             </div>
             <style jsx>{`
+                .product-card {
+                    border: 1px solid #eee;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    background: white;
+                    width: 100%;
+                }
+                .product-card.small {
+                    max-width: 100%;
+                }
+                .product-image-link {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+                .product-image {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+                .product-content {
+                    padding: ${size === "small" ? "10px" : "15px"};
+                }
+                .product-title {
+                    margin: 0 0 8px;
+                    font-size: ${size === "small" ? "14px" : "24px"};
+                    line-height: 1.3;
+                }
+                .product-title a {
+                    color: #333;
+                    text-decoration: none;
+                }
                 .product-meta {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 10px;
-                    margin: 10px 0;
-                    font-size: 13px;
+                    gap: 4px;
+                    margin: 8px 0;
+                    font-size: ${size === "small" ? "10px" : "13px"};
                 }
                 .meta-item {
                     display: flex;
                     align-items: center;
-                    gap: 5px;
-                    padding: 4px 8px;
+                    gap: 3px;
+                    padding: ${size === "small" ? "2px 4px" : "4px 8px"};
                     background-color: #f8f9fa;
                     border-radius: 4px;
                     color: black;
                 }
                 .meta-item i {
                     color: black;
-                    font-size: 12px;
+                    font-size: ${size === "small" ? "8px" : "12px"};
                 }
                 .product-footer {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    margin-top: 10px;
+                    margin-top: 8px;
                 }
                 .price {
-                    font-size: 18px;
+                    font-size: ${size === "small" ? "14px" : "18px"};
                     font-weight: 600;
-                    color: black;
+                    color: #dc3545;
                 }
                 .link-btn {
-                    padding: 8px 15px;
+                    padding: ${size === "small" ? "4px 8px" : "8px 15px"};
                     background-color: #dc3545;
                     color: white;
                     border-radius: 4px;
                     text-decoration: none;
-                    font-size: 14px;
+                    font-size: ${size === "small" ? "10px" : "14px"};
                     transition: background-color 0.3s;
                 }
                 .link-btn:hover {
                     background-color: #c82333;
                 }
-                .star-rating i {
-                    color: #dc3545;
+                @media (max-width: 768px) {
+                    .product-card.small {
+                        max-width: 100%;
+                    }
+                    .product-title {
+                        font-size: 14px;
+                    }
+                    .product-meta {
+                        font-size: 10px;
+                    }
+                    .price {
+                        font-size: 14px;
+                    }
+                    .link-btn {
+                        padding: 4px 8px;
+                        font-size: 10px;
+                    }
                 }
             `}</style>
         </div>

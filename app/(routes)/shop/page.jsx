@@ -20,7 +20,7 @@ const page = () => {
 
 
       <div style={{ marginTop: "50px" }}>
-        <ShopArea />
+        <ShopArea size={"large"} />
       </div>
 
     </div>

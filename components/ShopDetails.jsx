@@ -8,7 +8,6 @@ import ProductCard from "./ProductCard";
 
 const ShopDetails = ({ product }) => {
   if (!product) return null;
-  console.log(product)
   const relatedProducts = products.filter(p => p.category === product?.category && p.id !== product?.id);
 
   return (

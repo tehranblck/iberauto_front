@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ProductCard from "./ProductCard";
 
-const ShopArea = () => {
+const ShopArea = ({ size }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -46,8 +46,6 @@ const ShopArea = () => {
           throw new Error(`API yanıt vermedi: ${response.status}`);
         }
         const data = await response.json();
-        console.log('API Response:', data); // Debug için
-        console.log('First Product Full Structure:', data.data[0]); // İlk ürünün tam yapısını görelim
         if (!data.data) {
           throw new Error('API veri formatı hatalı');
         }
@@ -103,7 +101,6 @@ const ShopArea = () => {
     }
 
     const normalizedSearchTerm = normalizeText(searchTerm);
-    console.log('Normalized Search Term:', normalizedSearchTerm);
 
     const productBrand = normalizeText(product.marka_adi || '');
     const productModel = normalizeText(product.model || '');
@@ -111,13 +108,7 @@ const ShopArea = () => {
     const productName = normalizeText(product.mehsul_adi || '');
     const productOEM = normalizeText(product.oem || '');
 
-    console.log('Product Data:', {
-      brand: productBrand,
-      model: productModel,
-      code: productCode,
-      name: productName,
-      oem: productOEM
-    });
+
 
     const matchesSearch =
       productBrand.includes(normalizedSearchTerm) ||
@@ -128,14 +119,11 @@ const ShopArea = () => {
 
     const result = matchesCarBrand && matchesCarModel && matchesSearch;
     if (result) {
-      console.log('Matched Product:', product);
     }
     return result;
   });
 
   // Debug için filtrelenmiş ürünleri kontrol et
-  console.log('Filtered Products Count:', filteredProducts.length);
-  console.log('Filtered Products:', filteredProducts);
 
   // Sıralama işlemi
   const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -156,9 +144,6 @@ const ShopArea = () => {
 
   // Debug için filtrelenmiş ürünleri kontrol et
   useEffect(() => {
-    console.log('Filtered Products Count:', filteredProducts.length);
-    console.log('Current Page:', currentPage);
-    console.log('Current Products:', sortedProducts.slice(currentPage * productsPerPage - productsPerPage, currentPage * productsPerPage));
   }, [filteredProducts, currentPage, sortedProducts]);
 
   // Sayfalama için gerekli hesaplamalar
@@ -325,11 +310,12 @@ const ShopArea = () => {
                 </div>
               </div>
             </div>
-            <div className="row gy-4">
+            <div className={`row row-cols-1 row-cols-sm-2 row-cols-md-3 ${size === "small" ? "row-cols-lg-4" : "row-cols-lg-3"} g-4`}>
               {currentProducts.length > 0 ? (
                 currentProducts.map((product) => (
-                  <div key={product.id} className="col-xl-4 col-md-6 col-12">
+                  <div className="col" key={product.id}>
                     <ProductCard
+                      size={size}
                       slug={product.slug}
                       id={product.id}
                       title={product.mehsul_adi}

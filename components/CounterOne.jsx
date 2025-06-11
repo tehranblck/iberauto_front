@@ -2,8 +2,27 @@
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const CounterOne = () => {
+  const [bgImage, setBgImage] = useState("");
+
+  useEffect(() => {
+    const fetchBgImage = async () => {
+      try {
+        const response = await fetch('https://api.iberauto.az/api/kampaniya?populate=*');
+        const data = await response.json();
+        if (data.data?.foto?.url) {
+          setBgImage(`https://api.iberauto.az${data.data.foto.url}`);
+        }
+      } catch (error) {
+        console.error('Error fetching background image:', error);
+      }
+    };
+
+    fetchBgImage();
+  }, []);
+
   return (
     <div className="counter-area-1 space-bottom">
       <div className="container">
@@ -122,41 +141,45 @@ const CounterOne = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div
-                className="counter-checklist-wrap"
-                style={{
-                  backgroundImage:
-                    "url(assets/img/bg/counter-checklist-bg.png)",
-                  backgroundSize: 'cover'
-                }}
-              >
-                <div className="checklist style-white mb-50">
-                  <ul>
-                    <li>
-                      <i className="fas fa-check" />
-                      Orijinal və Keyfiyyətli Məhsullar
-                    </li>
-                    <li>
-                      <i className="fas fa-check" />
-                      Sürətli Çatdırılma
-                    </li>
-                    <li>
-                      <i className="fas fa-check" />
-                      Rəqabətli Qiymətlər
-                    </li>
-                  </ul>
-                </div>
-                <div className="call-media-wrap">
-                  <div className="icon">
-                    <Image src="/assets/img/logo.svg" alt="IberAuto" width={50} height={50} />
+              <div className="counter-checklist-wrap">
+                {bgImage && (
+                  <div className="bg-image-wrapper">
+                    <Image
+                      src={bgImage}
+                      alt="Background"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority
+                    />
                   </div>
-                  <div className="media-body">
-                    <h6 className="title text-white">Zəng Üçün Müraciət:</h6>
-                    <h4 className="link">
-                      <a className="text-white" href="tel:+994551004038">
-                        +994 55 100 40 38
-                      </a>
-                    </h4>
+                )}
+                <div className="content-wrapper">
+                  <div className="checklist style-white mb-50">
+                    <ul>
+                      <li>
+                        <i className="fas fa-check" />
+                        Orijinal və Keyfiyyətli Məhsullar
+                      </li>
+                      <li>
+                        <i className="fas fa-check" />
+                        Sürətli Çatdırılma
+                      </li>
+                      <li>
+                        <i className="fas fa-check" />
+                        Rəqabətli Qiymətlər
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="call-media-wrap">
+
+                    <div className="media-body">
+                      <h6 className="title text-white">Zəng Üçün Müraciət:</h6>
+                      <h4 className="link">
+                        <a className="text-white" href="tel:+994551004038">
+                          +994 55 100 40 38
+                        </a>
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -164,6 +187,74 @@ const CounterOne = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .counter-checklist-wrap {
+          position: relative;
+          min-height: 400px;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .bg-image-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+        .bg-image-wrapper::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 2;
+        }
+        .content-wrapper {
+          position: relative;
+          z-index: 3;
+          padding: 40px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .checklist ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .checklist ul li {
+          color: white;
+          margin-bottom: 15px;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+        }
+        .checklist ul li i {
+          color: white;
+          margin-right: 10px;
+        }
+        .call-media-wrap {
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        .call-media-wrap .title {
+          margin: 0;
+          font-size: 16px;
+        }
+        .call-media-wrap .link {
+          margin: 0;
+        }
+        .call-media-wrap .link a {
+          font-size: 24px;
+          font-weight: 600;
+        }
+      `}</style>
     </div>
   );
 };
