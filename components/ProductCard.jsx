@@ -14,7 +14,7 @@ const ProductCard = ({ id, title, price, image, brand, model, code, slug, size =
     return (
         <div className={`product-card style2 ${size === "small" ? "small" : ""}`}>
             <Link href={`/shop/${slug}`} className="product-image-link">
-                <Image
+                <Image style={{ width: '100%' }}
                     src={image}
                     alt={title}
                     width={size === "small" ? 150 : 300}
