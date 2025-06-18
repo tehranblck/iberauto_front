@@ -153,35 +153,7 @@ const CounterOne = () => {
                     />
                   </div>
                 )}
-                <div className="content-wrapper">
-                  <div className="checklist style-white mb-50">
-                    <ul>
-                      <li>
-                        <i className="fas fa-check" />
-                        Orijinal və Keyfiyyətli Məhsullar
-                      </li>
-                      <li>
-                        <i className="fas fa-check" />
-                        Sürətli Çatdırılma
-                      </li>
-                      <li>
-                        <i className="fas fa-check" />
-                        Rəqabətli Qiymətlər
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="call-media-wrap">
 
-                    <div className="media-body">
-                      <h6 className="title text-white">Zəng Üçün Müraciət:</h6>
-                      <h4 className="link">
-                        <a className="text-white" href="tel:+994551004038">
-                          +994 55 100 40 38
-                        </a>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
